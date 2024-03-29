@@ -7,8 +7,6 @@ import json
 # posibil nu e bn
 from app.Task import *
 from app.task_runner import ThreadPool
-from collections import OrderedDict
-
 
 # Example endpoint definition
 @webserver.route("/api/post_endpoint", methods=["POST"])
@@ -93,55 +91,84 @@ def ceva():
 def state_mean_request():
     # TODO
     # Get request data
+    data = request.json
+    print(f"Got request {data}")
     # Register job. Don't wait for task to finish
+    webserver.tasks_runner.submitTask(
+        StateMeanTask(webserver.job_counter, data, webserver)
+    )
     # Increment job_id counter
+    webserver.job_counter += 1
     # Return associated job_id
 
-    return jsonify({"status": "NotImplemented"})
-
+    return jsonify({"job_id": webserver.job_counter - 1})
 
 @webserver.route("/api/best5", methods=["POST"])
 def best5_request():
     # TODO
     # Get request data
+    data = request.json
+    print(f"Got request {data}")
     # Register job. Don't wait for task to finish
+    webserver.tasks_runner.submitTask(
+        BestFiveTask(webserver.job_counter, data, webserver)
+    )
     # Increment job_id counter
+    webserver.job_counter += 1
     # Return associated job_id
 
-    return jsonify({"status": "NotImplemented"})
+    return jsonify({"job_id": webserver.job_counter - 1})
 
 
 @webserver.route("/api/worst5", methods=["POST"])
 def worst5_request():
     # TODO
     # Get request data
+    data = request.json
+    print(f"Got request {data}")
     # Register job. Don't wait for task to finish
+    webserver.tasks_runner.submitTask(
+        WorstFiveTask(webserver.job_counter, data, webserver)
+    )
     # Increment job_id counter
+    webserver.job_counter += 1
     # Return associated job_id
 
-    return jsonify({"status": "NotImplemented"})
+    return jsonify({"job_id": webserver.job_counter - 1})
 
 
 @webserver.route("/api/global_mean", methods=["POST"])
 def global_mean_request():
     # TODO
     # Get request data
+    data = request.json
+    print(f"Got request {data}")
     # Register job. Don't wait for task to finish
+    webserver.tasks_runner.submitTask(
+        GlobalMeanTask(webserver.job_counter, data, webserver)
+    )
     # Increment job_id counter
+    webserver.job_counter += 1
     # Return associated job_id
 
-    return jsonify({"status": "NotImplemented"})
+    return jsonify({"job_id": webserver.job_counter - 1})
 
 
 @webserver.route("/api/diff_from_mean", methods=["POST"])
 def diff_from_mean_request():
     # TODO
     # Get request data
+    data = request.json
+    print(f"Got request {data}")
     # Register job. Don't wait for task to finish
+    webserver.tasks_runner.submitTask(
+        DiffFromMeanTask(webserver.job_counter, data, webserver)
+    )
     # Increment job_id counter
+    webserver.job_counter += 1
     # Return associated job_id
 
-    return jsonify({"status": "NotImplemented"})
+    return jsonify({"job_id": webserver.job_counter - 1})
 
 
 @webserver.route("/api/state_diff_from_mean", methods=["POST"])

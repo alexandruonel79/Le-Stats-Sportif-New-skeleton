@@ -9,7 +9,6 @@ Traceback (most recent call last):
 KeyError: 'job_id'
 
 ======================================================================
-ERROR: test_best5 (__main__.TestAPI.test_best5) (<subtest>)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
   File "/mnt/c/Users/alexa/Desktop/facultate/anul3/sem2/ASC/tema1_schelet_nou/asc-public/assignments/1-le-stats-sportif/checker/checker.py", line 110, in helper_test_endpoint
@@ -80,6 +79,7 @@ Traceback (most recent call last):
              ~~~~~~^^^^^^^^^^
 KeyError: 'job_id'
 
+======================================================================
 ERROR: test_diff_from_mean (__main__.TestAPI.test_diff_from_mean) (<subtest>)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
@@ -772,7 +772,6 @@ Traceback (most recent call last):
              ~~~~~~^^^^^^^^^^
 KeyError: 'job_id'
 
-======================================================================
 ERROR: test_state_mean_by_category (__main__.TestAPI.test_state_mean_by_category) (<subtest>)
 ----------------------------------------------------------------------
 Traceback (most recent call last):
@@ -944,7 +943,7 @@ Traceback (most recent call last):
 KeyError: 'job_id'
 
 ----------------------------------------------------------------------
-Ran 9 tests in 3.733s
+Ran 9 tests in 4.423s
 
 FAILED (errors=105)
 make: *** [Makefile:21: run_tests] Error 1
