@@ -100,15 +100,54 @@ class DiffFromMeanTask(Task):
         super().__init__(id, data, webserver)
 
     def solve(self):
+        global_mean_dict = GlobalMeanTask(self.id, self.data, self.webserver).solve()
+        global_mean = float(global_mean_dict["global_mean"])
 
-        total_sum = 0
-        total_count = 0
+        states_mean_dict = StatesMeanTask(self.id, self.data, self.webserver).solve()
+
+        response_dict = {}
+
+        for state in states_mean_dict:
+            response_dict[state] = global_mean - float(states_mean_dict[state])
+        
+        return response_dict
+
+
+class StateDiffFromMeanTask(Task):
+    def __init__(self, id, data, webserver):
+        super().__init__(id, data, webserver)
+
+    def solve(self):
+        global_mean_dict = GlobalMeanTask(self.id, self.data, self.webserver).solve()
+        global_mean = float(global_mean_dict["global_mean"])
+
+        state_mean_dict = StateMeanTask(self.id, self.data, self.webserver).solve()
+        state_mean = float(state_mean_dict[self.data["state"]])
+        
+        res = global_mean - state_mean
+
+        return {self.data["state"]: res} 
+    
+
+class MeanByCategoryTask(Task):
+    def __init__(self, id, data, webserver):
+        super().__init__(id, data, webserver)
+
+    def solve(self):
+        response_dict = {}
 
         for dict_entry in self.list_of_dict:
-            if dict_entry['Question'] == self.data['question']:
-                total_sum += float(dict_entry["Data_Value"])
-                total_count += 1
+            if dict_entry["Question"] != self.data["question"]:
+                continue
+            
+            tuple_string = str((dict_entry["LocationDesc"], dict_entry["StratificationCategory1"], dict_entry["Stratification1"]))
+            #print(f"Tuple string is {tuple_string}")
+            if tuple_string not in response_dict:
+                response_dict[tuple_string] = [float(dict_entry["Data_Value"])]
+            else:
+                response_dict[tuple_string].append(float(dict_entry["Data_Value"]))
 
-        mean = total_sum / total_count
-
-        return {"global_mean": mean}
+        for key in response_dict:
+            response_dict[key] = sum(response_dict[key]) / len(response_dict[key])
+        
+        return dict(sorted(response_dict.items()))

@@ -44,8 +44,8 @@ def get_response(job_id):
     #    })
     res = webserver.tasks_runner.get_job_state(job_id)
     # If not, return running status
-
     return jsonify(res)
+
 
 
 
@@ -175,22 +175,34 @@ def diff_from_mean_request():
 def state_diff_from_mean_request():
     # TODO
     # Get request data
+    data = request.json
+    print(f"Got request {data}")
     # Register job. Don't wait for task to finish
+    webserver.tasks_runner.submitTask(
+        StateDiffFromMeanTask(webserver.job_counter, data, webserver)
+    )
     # Increment job_id counter
+    webserver.job_counter += 1
     # Return associated job_id
 
-    return jsonify({"status": "NotImplemented"})
+    return jsonify({"job_id": webserver.job_counter - 1})
 
 
 @webserver.route("/api/mean_by_category", methods=["POST"])
 def mean_by_category_request():
     # TODO
     # Get request data
+    data = request.json
+    print(f"Got request {data}")
     # Register job. Don't wait for task to finish
+    webserver.tasks_runner.submitTask(
+        MeanByCategoryTask(webserver.job_counter, data, webserver)
+    )
     # Increment job_id counter
+    webserver.job_counter += 1
     # Return associated job_id
 
-    return jsonify({"status": "NotImplemented"})
+    return jsonify({"job_id": webserver.job_counter - 1})
 
 
 @webserver.route("/api/state_mean_by_category", methods=["POST"])

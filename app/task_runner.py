@@ -39,7 +39,7 @@ class ThreadPool:
 
     def getTask(self) -> Task:
         # coada e concurenta
-        return self.queue.get()
+        return self.queue.get(block= False)
 
     def submitTask(self, task: Task):
         if self.shutdown != True:
