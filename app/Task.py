@@ -139,13 +139,13 @@ class MeanByCategoryTask(Task):
         for dict_entry in self.list_of_dict:
             if dict_entry["Question"] != self.data["question"]:
                 continue
-            
-            tuple_string = str((dict_entry["LocationDesc"], dict_entry["StratificationCategory1"], dict_entry["Stratification1"]))
-            #print(f"Tuple string is {tuple_string}")
-            if tuple_string not in response_dict:
-                response_dict[tuple_string] = [float(dict_entry["Data_Value"])]
-            else:
-                response_dict[tuple_string].append(float(dict_entry["Data_Value"]))
+            if dict_entry["StratificationCategory1"]:
+                tuple_string = str((dict_entry["LocationDesc"], dict_entry["StratificationCategory1"], dict_entry["Stratification1"]))
+                #print(f"Tuple string is {tuple_string}")
+                if tuple_string not in response_dict:
+                    response_dict[tuple_string] = [float(dict_entry["Data_Value"])]
+                else:
+                    response_dict[tuple_string].append(float(dict_entry["Data_Value"]))
 
         for key in response_dict:
             response_dict[key] = sum(response_dict[key]) / len(response_dict[key])
