@@ -151,3 +151,30 @@ class MeanByCategoryTask(Task):
             response_dict[key] = sum(response_dict[key]) / len(response_dict[key])
         
         return dict(sorted(response_dict.items()))
+
+
+class StateMeanByCategoryTask(Task):
+    def __init__(self, id, data, webserver):
+        super().__init__(id, data, webserver)
+
+    def solve(self):
+        response_dict = {}
+
+        for dict_entry in self.list_of_dict:
+
+            if dict_entry["Question"] != self.data["question"] or dict_entry["LocationDesc"] != self.data["state"]:
+                continue
+
+            if dict_entry["StratificationCategory1"]:
+                tuple_string = str((dict_entry["StratificationCategory1"], dict_entry["Stratification1"]))
+                #print(f"Tuple string is {tuple_string}")
+                if tuple_string not in response_dict:
+                    response_dict[tuple_string] = [float(dict_entry["Data_Value"])]
+                else:
+                    response_dict[tuple_string].append(float(dict_entry["Data_Value"]))
+
+        for key in response_dict:
+            response_dict[key] = sum(response_dict[key]) / len(response_dict[key])
+        
+        response_dict = dict(sorted(response_dict.items()))
+        return {self.data["state"]: response_dict}

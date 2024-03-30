@@ -209,11 +209,17 @@ def mean_by_category_request():
 def state_mean_by_category_request():
     # TODO
     # Get request data
+    data = request.json
+    print(f"Got request {data}")
     # Register job. Don't wait for task to finish
+    webserver.tasks_runner.submitTask(
+        StateMeanByCategoryTask(webserver.job_counter, data, webserver)
+    )
     # Increment job_id counter
+    webserver.job_counter += 1
     # Return associated job_id
 
-    return jsonify({"status": "NotImplemented"})
+    return jsonify({"job_id": webserver.job_counter - 1})
 
 
 # You can check localhost in your browser to see what this displays
