@@ -1,12 +1,11 @@
 from queue import Queue
 from threading import Thread, Event, Lock
+from app.Task import Task
 import time
 import os
 import json
-from app.Task import Task
 
 class ThreadPool:
-    queue: Queue[Task]
     def __init__(self):
         # You must implement a ThreadPool of TaskRunners
         # Your ThreadPool should check if an environment variable TP_NUM_OF_THREADS is defined
@@ -19,77 +18,75 @@ class ThreadPool:
         if "TP_NUM_OF_THREADS" in os.environ:
             self.num_of_threads = int(os.environ["TP_NUM_OF_THREADS"])
         else:
-            self.num_of_threads =  os.cpu_count()
-            # self.num_of_threads =  2
-
-
-        self.threads = []
-        self.queue = Queue()
-        self.event = Event()
-        self.shutdown = False
-        self.shutdown_lock = Lock()  # Lock for accessing shutdown variable
-
+            # self.num_of_threads =  os.cpu_count()
+            self.num_of_threads =  3
+            self.task_queue = Queue()
+            self.shutdown_event = Event()
+            self.threads_list = []
+            self.lock = Lock()
         print(f"Number of threads: {self.num_of_threads}")
 
     def start(self):
         for i in range(self.num_of_threads):
-            self.threads.append(TaskRunner(self))
-            self.threads[i].start()
-
-
-    def getTask(self) -> Task:
-        # coada e concurenta
-        return self.queue.get(block= False)
-
-    def submitTask(self, task: Task):
-        if self.shutdown != True:
-            print(f"Submitting task {task.id}")
-            self.queue.put(task)
-            self.event.set()
+            self.threads_list.append(TaskRunner(self.shutdown_event, self.task_queue, self.lock))
+            self.threads_list[i].start()
     
     def stop(self):
-        with self.shutdown_lock:
-            self.shutdown = True
-
-        self.event.set()
-
-        for thread in self.threads:
+        self.shutdown_event.set()
+        for thread in self.threads_list:
             thread.join()
-    
-    # function to check if thread is alive and print the result
+
+    def submitTask(self, task: Task):
+        with self.lock:
+            #time.sleep(5)
+            print("Adding task to queue")
+            self.task_queue.put(task)  
+
     def check_threads(self):
-        for thread in self.threads:
+        for thread in self.threads_list:
             if thread.is_alive():
                 print(f"Thread {thread.name} is alive")
             else:
-                print(f"Thread {thread.name} is dead")
-    
-class TaskRunner(Thread):
-    def __init__(self, threadPool: ThreadPool):
-        super().__init__()
-        self.threadPool = threadPool
+                print(f"Thread {thread.name} is dead")      
 
+class TaskRunner(Thread):
+    def __init__(self, shutdown_event: Event, task_queue: Queue, lock: Lock):
+        # TODO: init necessary data structures
+        super().__init__()
+        self.shutdown_event = shutdown_event
+        self.task_queue = task_queue
+        self.lock = lock
+
+    def save_result(self, result, task_id):
+        os.makedirs("results", exist_ok=True)
+        # save result to disk
+        with open(f"results/job_id_{task_id}.txt", "w") as f:
+            # f.write(str(result))\
+            json.dump(result, f)
+
+    
     def run(self):
         while True:
-
-            if self.threadPool.shutdown == True and self.threadPool.queue.empty():
-                print(f"Thread {self.name} is shutting down")
+            # TODO
+            # Get pending job
+            # Execute the job and save the result to disk
+            # Repeat until graceful_shutdown
+            if self.shutdown_event.is_set() and self.task_queue.empty():
+                print(f"Thread {self.name} is shutting down!\n")
                 break
-
-            self.threadPool.event.wait()
-
-            if self.threadPool.queue.empty():
-                self.threadPool.event.clear()
-                continue
-
-            task = self.threadPool.getTask()
+            
+            with self.lock:
+                #time.sleep(5)
+                if self.task_queue.empty():
+                    #print(f"Thread {self.name} found the queue empty\n")
+                    continue
+                
+                task = self.task_queue.get()
+            print(f"Thread {self.name} is solving the task {task}!\n")
             result = task.solve()
-            # time.sleep(5)
-            # result += f" by thread {self.name}"
-            print(f"Task {task.id} solved by thread {self.name}")
+            #time.sleep(5)
+            self.save_result(result, task.id)
+            print(f"Thread {self.name} finished the task!\n")
 
-            os.makedirs("results", exist_ok=True)
-            # save result to disk
-            with open(f"results/job_id_{task.id}.txt", "w") as f:
-                # f.write(str(result))\
-                json.dump(result, f)
+
+            

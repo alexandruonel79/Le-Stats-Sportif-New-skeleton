@@ -8,7 +8,7 @@ class DataIngestor:
         # https://www.geeksforgeeks.org/load-csv-data-into-list-and-dictionary-using-python/
         with open(csv_path, 'r') as f:
             dict_reader = DictReader(f)
-        
+    
             self.list_of_dict = list(dict_reader)
                     
             self.questions_best_is_min = [
