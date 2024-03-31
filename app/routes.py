@@ -42,7 +42,7 @@ def get_response(job_id):
     #        'status': 'done',
     #        'data': res
     #    })
-    res = jobs_states_func.get_result_by_Id(job_id)
+    res = jobs_states_func.get_result_by_Id(job_id, webserver.tasks_runner.get_fs_lock())
     # If not, return running status
     return jsonify(res)
 
@@ -51,7 +51,7 @@ def get_response(job_id):
 
 @webserver.route("/api/jobs", methods=["GET"])
 def get_all_jobs_status():
-    res = jobs_states_func.get_all_jobs_status_func(webserver.job_counter)
+    res = jobs_states_func.get_all_jobs_status_func(webserver.job_counter, webserver.tasks_runner.get_fs_lock())
     # response_dict = {}
     # response_dict["status"] = "done"
     # response_dict["data"] = res
