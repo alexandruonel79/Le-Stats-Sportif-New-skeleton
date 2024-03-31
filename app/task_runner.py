@@ -25,6 +25,7 @@ class ThreadPool:
             self.threads_list = []
             self.lock = Lock()
             self.fs_lock = Lock()
+            self.shutdown = False
         #print(f"Number of threads: {self.num_of_threads}")
 
     def start(self):
@@ -34,14 +35,19 @@ class ThreadPool:
     
     def stop(self):
         self.shutdown_event.set()
+        self.shutdown = True
         for thread in self.threads_list:
             thread.join()
 
-    def submitTask(self, task: Task):
-        with self.lock:
-            #time.sleep(5)
-            #print("Adding task to queue")
-            self.task_queue.put(task)  
+    def submitTask(self, task: Task) -> bool:
+        if not self.shutdown:
+            with self.lock:
+                #time.sleep(5)
+                #print("Adding task to queue")
+                self.task_queue.put(task)
+            return True  
+        else:
+            return False
 
     def get_fs_lock(self) -> Lock:
         return self.fs_lock

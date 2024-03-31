@@ -19,10 +19,6 @@ class Task(ABC):
     def solve(self):
         pass
 
-class StatesMeanTask(Task):
-    def __init__(self, id, data, list_of_dict):
-        super().__init__(id, data, list_of_dict)
-
     def calculate_mean(self, data_values_list: list) -> float:
         total_sum = 0 
 
@@ -30,6 +26,10 @@ class StatesMeanTask(Task):
             total_sum += val
         
         return total_sum / len(data_values_list)
+
+class StatesMeanTask(Task):
+    def __init__(self, id, data, list_of_dict):
+        super().__init__(id, data, list_of_dict)
 
     def solve(self):
         response_dict = {}
@@ -186,7 +186,7 @@ class StateMeanByCategoryTask(Task):
                     response_dict[tuple_string].append(float(dict_entry["Data_Value"]))
 
         for key in response_dict:
-            response_dict[key] = sum(response_dict[key]) / len(response_dict[key])
+            response_dict[key] = self.calculate_mean(response_dict[key])
         
         response_dict = dict(sorted(response_dict.items()))
         return {self.data["state"]: response_dict}

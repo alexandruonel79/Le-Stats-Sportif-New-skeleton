@@ -14,7 +14,7 @@ def post_endpoint():
     if request.method == "POST":
         # Assuming the request contains JSON data
         data = request.json
-        print(f"got data in post {data}")
+        #print(f"got data in post {data}")
 
         # Process the received data
         # For demonstration purposes, just echoing back the received data
@@ -29,7 +29,7 @@ def post_endpoint():
 
 @webserver.route("/api/get_results/<job_id>", methods=["GET"])
 def get_response(job_id):
-    print(f"JobID is {job_id}")
+    #print(f"JobID is {job_id}")
     job_id = int(job_id)
     # TODO
     # Check if job_id is valid
@@ -55,23 +55,27 @@ def get_all_jobs_status():
     # response_dict = {}
     # response_dict["status"] = "done"
     # response_dict["data"] = res
-    print({"status": "done", "data": res})
+    #print({"status": "done", "data": res})
     return jsonify({"status": "done", "data": res})
 
 @webserver.route("/api/states_mean", methods=["POST"])
 def states_mean_request():
     # Get request data
     data = request.json
-    print(f"Got request {data}")
+    #print(f"Got request {data}")
 
     # TODO
     # Register job. Don't wait for task to finish
     # Increment job_id counter
     # Return associated job_id
 
-    webserver.tasks_runner.submitTask(
+    submitted = webserver.tasks_runner.submitTask(
         StatesMeanTask(webserver.job_counter, data, webserver.data_ingestor.get_list_of_dict())
     )
+
+    if not submitted:
+        return jsonify({"Failed": "Server is closed"})
+    
     webserver.job_counter += 1
 
     return jsonify({"job_id": webserver.job_counter - 1})
@@ -92,11 +96,13 @@ def state_mean_request():
     # TODO
     # Get request data
     data = request.json
-    print(f"Got request {data}")
+    #print(f"Got request {data}")
     # Register job. Don't wait for task to finish
-    webserver.tasks_runner.submitTask(
+    submitted = webserver.tasks_runner.submitTask(
         StateMeanTask(webserver.job_counter, data,  webserver.data_ingestor.get_list_of_dict())
     )
+    if not submitted:
+        return jsonify({"Failed": "Server is closed"})
     # Increment job_id counter
     webserver.job_counter += 1
     # Return associated job_id
@@ -108,11 +114,14 @@ def best5_request():
     # TODO
     # Get request data
     data = request.json
-    print(f"Got request {data}")
+    #print(f"Got request {data}")
     # Register job. Don't wait for task to finish
-    webserver.tasks_runner.submitTask(
+    submitted = webserver.tasks_runner.submitTask(
         BestFiveTask(webserver.job_counter, data,  webserver.data_ingestor.get_list_of_dict())
     )
+
+    if not submitted:
+        return jsonify({"Failed": "Server is closed"})  
     # Increment job_id counter
     webserver.job_counter += 1
     # Return associated job_id
@@ -125,11 +134,14 @@ def worst5_request():
     # TODO
     # Get request data
     data = request.json
-    print(f"Got request {data}")
+    #print(f"Got request {data}")
     # Register job. Don't wait for task to finish
-    webserver.tasks_runner.submitTask(
+    submitted = webserver.tasks_runner.submitTask(
         WorstFiveTask(webserver.job_counter, data,  webserver.data_ingestor.get_list_of_dict())
     )
+
+    if not submitted:
+        return jsonify({"Failed": "Server is closed"})
     # Increment job_id counter
     webserver.job_counter += 1
     # Return associated job_id
@@ -142,11 +154,13 @@ def global_mean_request():
     # TODO
     # Get request data
     data = request.json
-    print(f"Got request {data}")
+    #print(f"Got request {data}")
     # Register job. Don't wait for task to finish
-    webserver.tasks_runner.submitTask(
+    submitted = webserver.tasks_runner.submitTask(
         GlobalMeanTask(webserver.job_counter, data,  webserver.data_ingestor.get_list_of_dict())
     )
+    if not submitted:
+        return jsonify({"Failed": "Server is closed"})
     # Increment job_id counter
     webserver.job_counter += 1
     # Return associated job_id
@@ -159,11 +173,14 @@ def diff_from_mean_request():
     # TODO
     # Get request data
     data = request.json
-    print(f"Got request {data}")
+    #print(f"Got request {data}")
     # Register job. Don't wait for task to finish
-    webserver.tasks_runner.submitTask(
+    submitted = webserver.tasks_runner.submitTask(
         DiffFromMeanTask(webserver.job_counter, data,  webserver.data_ingestor.get_list_of_dict())
     )
+
+    if not submitted:
+        return jsonify({"Failed": "Server is closed"})
     # Increment job_id counter
     webserver.job_counter += 1
     # Return associated job_id
@@ -176,11 +193,13 @@ def state_diff_from_mean_request():
     # TODO
     # Get request data
     data = request.json
-    print(f"Got request {data}")
+    #print(f"Got request {data}")
     # Register job. Don't wait for task to finish
-    webserver.tasks_runner.submitTask(
+    submitted = webserver.tasks_runner.submitTask(
         StateDiffFromMeanTask(webserver.job_counter, data,  webserver.data_ingestor.get_list_of_dict())
     )
+    if not submitted:
+        return jsonify({"Failed": "Server is closed"})
     # Increment job_id counter
     webserver.job_counter += 1
     # Return associated job_id
@@ -193,11 +212,13 @@ def mean_by_category_request():
     # TODO
     # Get request data
     data = request.json
-    print(f"Got request {data}")
+    #print(f"Got request {data}")
     # Register job. Don't wait for task to finish
-    webserver.tasks_runner.submitTask(
+    submitted = webserver.tasks_runner.submitTask(
         MeanByCategoryTask(webserver.job_counter, data,  webserver.data_ingestor.get_list_of_dict())
     )
+    if not submitted:
+        return jsonify({"Failed": "Server is closed"})
     # Increment job_id counter
     webserver.job_counter += 1
     # Return associated job_id
@@ -210,11 +231,13 @@ def state_mean_by_category_request():
     # TODO
     # Get request data
     data = request.json
-    print(f"Got request {data}")
+    #print(f"Got request {data}")
     # Register job. Don't wait for task to finish
-    webserver.tasks_runner.submitTask(
+    submitted = webserver.tasks_runner.submitTask(
         StateMeanByCategoryTask(webserver.job_counter, data, webserver.data_ingestor.get_list_of_dict())
     )
+    if not submitted:
+        return jsonify({"Failed": "Server is closed"})
     # Increment job_id counter
     webserver.job_counter += 1
     # Return associated job_id
