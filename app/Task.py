@@ -178,3 +178,6 @@ class StateMeanByCategoryTask(Task):
         
         response_dict = dict(sorted(response_dict.items()))
         return {self.data["state"]: response_dict}
+
+
+        

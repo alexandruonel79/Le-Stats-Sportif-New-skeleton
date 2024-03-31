@@ -7,7 +7,7 @@ import json
 # posibil nu e bn
 from app.Task import *
 from app.task_runner import ThreadPool
-
+from app import jobs_states_func
 # Example endpoint definition
 @webserver.route("/api/post_endpoint", methods=["POST"])
 def post_endpoint():
@@ -34,7 +34,7 @@ def get_response(job_id):
     # TODO
     # Check if job_id is valid
     #print(f"Current counter is {webserver.job_counter} and job_id is {job_id}")
-    if webserver.job_counter <= job_id:
+    if webserver.job_counter <= job_id or job_id <= 0:
         return jsonify({"status": "error", "reason": "Invalid job_id"})
     # Check if job_id is done and return the result
     #    res = res_for(job_id)
@@ -42,7 +42,7 @@ def get_response(job_id):
     #        'status': 'done',
     #        'data': res
     #    })
-    res = webserver.tasks_runner.get_job_state(job_id)
+    res = jobs_states_func.get_result_by_Id(job_id)
     # If not, return running status
     return jsonify(res)
 
@@ -51,7 +51,7 @@ def get_response(job_id):
 
 @webserver.route("/api/jobs", methods=["GET"])
 def get_all_jobs_status():
-    res = webserver.tasks_runner.get_all_jobs_states()
+    res = jobs_states_func.get_all_jobs_status_func(webserver.job_counter)
     # response_dict = {}
     # response_dict["status"] = "done"
     # response_dict["data"] = res
