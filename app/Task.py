@@ -3,19 +3,33 @@ from abc import ABC, abstractmethod
 import time 
 
 class Task(ABC):
-    def __init__(self, id, data, webserver):
-        self.webserver = webserver
+    def __init__(self, id, data, list_of_dict):
         self.data = data
         self.id = id
-        self.list_of_dict = self.webserver.data_ingestor.get_list_of_dict()
+        self.list_of_dict = list_of_dict
+        self.questions_best_is_min = [
+            'Percent of adults aged 18 years and older who have an overweight classification',
+            'Percent of adults aged 18 years and older who have obesity',
+            'Percent of adults who engage in no leisure-time physical activity',
+            'Percent of adults who report consuming fruit less than one time daily',
+            'Percent of adults who report consuming vegetables less than one time daily'
+        ]
 
     @abstractmethod
     def solve(self):
         pass
 
 class StatesMeanTask(Task):
-    def __init__(self, id, data, webserver):
-        super().__init__(id, data, webserver)
+    def __init__(self, id, data, list_of_dict):
+        super().__init__(id, data, list_of_dict)
+
+    def calculate_mean(self, data_values_list: list) -> float:
+        total_sum = 0 
+
+        for val in data_values_list:
+            total_sum += val
+        
+        return total_sum / len(data_values_list)
 
     def solve(self):
         response_dict = {}
@@ -28,9 +42,9 @@ class StatesMeanTask(Task):
                     response_dict[dict_entry['LocationDesc']] = [float(dict_entry['Data_Value'])]
 
         for state in response_dict:
-            response_dict[state] = sum(response_dict[state]) / len(response_dict[state])
-
-        if self.webserver.data_ingestor.question_answer_best_is_min(self.data['question']):
+            response_dict[state] = self.calculate_mean(response_dict[state])
+        # if it's not in best is min it's the other way
+        if self.data['question'] in self.questions_best_is_min:
             response_dict = dict(sorted(response_dict.items(), key=lambda item: item[1]))
         else:
             response_dict = dict(sorted(response_dict.items(), key=lambda item: item[1], reverse=True))
@@ -41,8 +55,8 @@ class StatesMeanTask(Task):
 
 
 class StateMeanTask(Task):
-    def __init__(self, id, data, webserver):
-        super().__init__(id, data, webserver)
+    def __init__(self, id, data, list_of_dict):
+        super().__init__(id, data, list_of_dict)
 
     def solve(self):
         total_sum = 0
@@ -58,27 +72,25 @@ class StateMeanTask(Task):
         return {self.data["state"]: mean}
 
 class BestFiveTask(Task):
-    def __init__(self, id, data, webserver):
-        super().__init__(id, data, webserver)
+    def __init__(self, id, data, list_of_dict):
+        super().__init__(id, data, list_of_dict)
 
     def solve(self):
-        response_dict = StatesMeanTask(self.webserver.job_counter, self.data, self.webserver).solve()
+        response_dict = StatesMeanTask(self.id, self.data, self.list_of_dict).solve()
         return dict(list(response_dict.items())[:5])
 
 class WorstFiveTask(Task):
-    def __init__(self, id, data, webserver):
-        super().__init__(id, data, webserver)
+    def __init__(self, id, data, list_of_dict):
+        super().__init__(id, data, list_of_dict)
 
     def solve(self):
-        response_dict = StatesMeanTask(self.webserver.job_counter, self.data, self.webserver).solve()
-        reversed_dict = dict(reversed(list(response_dict.items())))
-        last_five_entries = dict(list(reversed_dict.items())[:5])
-        return last_five_entries
+        response_dict = StatesMeanTask(self.id, self.data, self.list_of_dict).solve()
+        return dict(list(response_dict.items())[-5:])
     
 
 class GlobalMeanTask(Task):
-    def __init__(self, id, data, webserver):
-        super().__init__(id, data, webserver)
+    def __init__(self, id, data, list_of_dict):
+        super().__init__(id, data, list_of_dict)
 
     def solve(self):
 
@@ -96,14 +108,14 @@ class GlobalMeanTask(Task):
 
 
 class DiffFromMeanTask(Task):
-    def __init__(self, id, data, webserver):
-        super().__init__(id, data, webserver)
+    def __init__(self, id, data, list_of_dict):
+        super().__init__(id, data, list_of_dict)
 
     def solve(self):
-        global_mean_dict = GlobalMeanTask(self.id, self.data, self.webserver).solve()
+        global_mean_dict = GlobalMeanTask(self.id, self.data, self.list_of_dict).solve()
         global_mean = float(global_mean_dict["global_mean"])
 
-        states_mean_dict = StatesMeanTask(self.id, self.data, self.webserver).solve()
+        states_mean_dict = StatesMeanTask(self.id, self.data, self.list_of_dict).solve()
 
         response_dict = {}
 
@@ -114,14 +126,14 @@ class DiffFromMeanTask(Task):
 
 
 class StateDiffFromMeanTask(Task):
-    def __init__(self, id, data, webserver):
-        super().__init__(id, data, webserver)
+    def __init__(self, id, data, list_of_dict):
+        super().__init__(id, data, list_of_dict)
 
     def solve(self):
-        global_mean_dict = GlobalMeanTask(self.id, self.data, self.webserver).solve()
+        global_mean_dict = GlobalMeanTask(self.id, self.data, self.list_of_dict).solve()
         global_mean = float(global_mean_dict["global_mean"])
 
-        state_mean_dict = StateMeanTask(self.id, self.data, self.webserver).solve()
+        state_mean_dict = StateMeanTask(self.id, self.data, self.list_of_dict).solve()
         state_mean = float(state_mean_dict[self.data["state"]])
         
         res = global_mean - state_mean
@@ -130,8 +142,8 @@ class StateDiffFromMeanTask(Task):
     
 
 class MeanByCategoryTask(Task):
-    def __init__(self, id, data, webserver):
-        super().__init__(id, data, webserver)
+    def __init__(self, id, data, list_of_dict):
+        super().__init__(id, data, list_of_dict)
 
     def solve(self):
         response_dict = {}
@@ -154,8 +166,8 @@ class MeanByCategoryTask(Task):
 
 
 class StateMeanByCategoryTask(Task):
-    def __init__(self, id, data, webserver):
-        super().__init__(id, data, webserver)
+    def __init__(self, id, data, list_of_dict):
+        super().__init__(id, data, list_of_dict)
 
     def solve(self):
         response_dict = {}

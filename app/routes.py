@@ -70,7 +70,7 @@ def states_mean_request():
     # Return associated job_id
 
     webserver.tasks_runner.submitTask(
-        StatesMeanTask(webserver.job_counter, data, webserver)
+        StatesMeanTask(webserver.job_counter, data, webserver.data_ingestor.get_list_of_dict())
     )
     webserver.job_counter += 1
 
@@ -95,7 +95,7 @@ def state_mean_request():
     print(f"Got request {data}")
     # Register job. Don't wait for task to finish
     webserver.tasks_runner.submitTask(
-        StateMeanTask(webserver.job_counter, data, webserver)
+        StateMeanTask(webserver.job_counter, data,  webserver.data_ingestor.get_list_of_dict())
     )
     # Increment job_id counter
     webserver.job_counter += 1
@@ -111,7 +111,7 @@ def best5_request():
     print(f"Got request {data}")
     # Register job. Don't wait for task to finish
     webserver.tasks_runner.submitTask(
-        BestFiveTask(webserver.job_counter, data, webserver)
+        BestFiveTask(webserver.job_counter, data,  webserver.data_ingestor.get_list_of_dict())
     )
     # Increment job_id counter
     webserver.job_counter += 1
@@ -128,7 +128,7 @@ def worst5_request():
     print(f"Got request {data}")
     # Register job. Don't wait for task to finish
     webserver.tasks_runner.submitTask(
-        WorstFiveTask(webserver.job_counter, data, webserver)
+        WorstFiveTask(webserver.job_counter, data,  webserver.data_ingestor.get_list_of_dict())
     )
     # Increment job_id counter
     webserver.job_counter += 1
@@ -145,7 +145,7 @@ def global_mean_request():
     print(f"Got request {data}")
     # Register job. Don't wait for task to finish
     webserver.tasks_runner.submitTask(
-        GlobalMeanTask(webserver.job_counter, data, webserver)
+        GlobalMeanTask(webserver.job_counter, data,  webserver.data_ingestor.get_list_of_dict())
     )
     # Increment job_id counter
     webserver.job_counter += 1
@@ -162,7 +162,7 @@ def diff_from_mean_request():
     print(f"Got request {data}")
     # Register job. Don't wait for task to finish
     webserver.tasks_runner.submitTask(
-        DiffFromMeanTask(webserver.job_counter, data, webserver)
+        DiffFromMeanTask(webserver.job_counter, data,  webserver.data_ingestor.get_list_of_dict())
     )
     # Increment job_id counter
     webserver.job_counter += 1
@@ -179,7 +179,7 @@ def state_diff_from_mean_request():
     print(f"Got request {data}")
     # Register job. Don't wait for task to finish
     webserver.tasks_runner.submitTask(
-        StateDiffFromMeanTask(webserver.job_counter, data, webserver)
+        StateDiffFromMeanTask(webserver.job_counter, data,  webserver.data_ingestor.get_list_of_dict())
     )
     # Increment job_id counter
     webserver.job_counter += 1
@@ -196,7 +196,7 @@ def mean_by_category_request():
     print(f"Got request {data}")
     # Register job. Don't wait for task to finish
     webserver.tasks_runner.submitTask(
-        MeanByCategoryTask(webserver.job_counter, data, webserver)
+        MeanByCategoryTask(webserver.job_counter, data,  webserver.data_ingestor.get_list_of_dict())
     )
     # Increment job_id counter
     webserver.job_counter += 1
@@ -213,7 +213,7 @@ def state_mean_by_category_request():
     print(f"Got request {data}")
     # Register job. Don't wait for task to finish
     webserver.tasks_runner.submitTask(
-        StateMeanByCategoryTask(webserver.job_counter, data, webserver)
+        StateMeanByCategoryTask(webserver.job_counter, data, webserver.data_ingestor.get_list_of_dict())
     )
     # Increment job_id counter
     webserver.job_counter += 1
