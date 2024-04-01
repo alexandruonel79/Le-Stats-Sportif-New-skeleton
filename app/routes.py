@@ -83,13 +83,19 @@ def states_mean_request():
 
 # acum test
 @webserver.route("/api/graceful_shutdown", methods=["GET"])
-def ceva():
+def graceful_shutdown():
     print("Closing server")
     webserver.tasks_runner.stop()
     print("Server closed")
     webserver.tasks_runner.check_threads()
-    return jsonify({"status": "NotImplemented"})
+    return jsonify({"status": "done", "data": "Server closed!"})
 
+
+# acum test
+@webserver.route("/api/num_jobs", methods=["GET"])
+def num_jobs():
+    res = jobs_states_func.get_unsolved_jobs_count(webserver.job_counter, webserver.tasks_runner.get_fs_lock())
+    return jsonify({"status": "done", "data": res})
 
 @webserver.route("/api/state_mean", methods=["POST"])
 def state_mean_request():
@@ -106,7 +112,7 @@ def state_mean_request():
     # Increment job_id counter
     webserver.job_counter += 1
     # Return associated job_id
-
+    webserver.logger.info(f"Registered job with id {webserver.job_counter - 1}")
     return jsonify({"job_id": webserver.job_counter - 1})
 
 @webserver.route("/api/best5", methods=["POST"])

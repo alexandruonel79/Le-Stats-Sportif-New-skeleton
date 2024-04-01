@@ -19,7 +19,7 @@ class ThreadPool:
             self.num_of_threads = int(os.environ["TP_NUM_OF_THREADS"])
         else:
             self.num_of_threads =  os.cpu_count()
-            #self.num_of_threads =  3
+            #self.num_of_threads = 2
             self.task_queue = Queue()
             self.shutdown_event = Event()
             self.threads_list = []
