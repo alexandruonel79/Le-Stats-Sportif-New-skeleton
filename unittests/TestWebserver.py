@@ -3,6 +3,7 @@ import os
 import json
 import requests
 from deepdiff import DeepDiff
+import time 
 
 class TestWebserver(unittest.TestCase):
 
@@ -25,7 +26,7 @@ class TestWebserver(unittest.TestCase):
         response_data = res.json()
         
         job_id = response_data["job_id"]
-
+        time.sleep(0.2)
         res = requests.get(f"http://127.0.0.1:5000/api/get_results/{job_id}")
 
         response_data = res.json()
@@ -36,6 +37,6 @@ class TestWebserver(unittest.TestCase):
 
         with open("refs/out_states_mean.txt", "r") as fin:
             ref_data = json.load(fin)
-
+        print(response_data)
         d = DeepDiff(response_data['data'], ref_data, math_epsilon=0.01)
         self.assertTrue(d == {}, str(d))
