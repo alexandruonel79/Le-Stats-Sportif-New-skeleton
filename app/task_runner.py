@@ -89,16 +89,17 @@ class TaskRunner(Thread):
             # Get pending job
             # Execute the job and save the result to disk
             # Repeat until graceful_shutdown
+            # print(f"{self.name} is waiting\n")
             self.new_job_event.wait()
 
             if self.shutdown_event.is_set() and self.task_queue.empty():
-                #print(f"Thread {self.name} is shutting down!\n")
+                # print(f"{self.name} is shutting down!\n")
                 break
             
             with self.lock:
                 #time.sleep(5)
                 if self.task_queue.empty():
-                    #print(f"Thread {self.name} found the queue empty\n")
+                    # print(f"{self.name} found the queue empty\n")
                     self.new_job_event.clear()
                     continue
                 
@@ -106,7 +107,8 @@ class TaskRunner(Thread):
                 # in pauza
                 if not self.shutdown_event.is_set():
                     self.new_job_event.clear()
-            #print(f"Thread {self.name} is solving the task {task}!\n")
+
+            # print(f"{self.name} is solving the task {task}!\n")
             result = task.solve()
             #time.sleep(5)
             self.save_result(result, task.id)

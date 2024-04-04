@@ -40,8 +40,8 @@ class StatesMeanTask(Task):
 
     def solve(self):
         #time.sleep(5)
-        if not self.used_as_helper_func:
-            self.logger.info("Started working on states mean job with id: %d.", self.id)
+        # if not self.used_as_helper_func:
+        #     self.logger.info("Started working on states mean job with id: %d.", self.id)
 
         response_dict = {}
 
@@ -77,8 +77,8 @@ class StateMeanTask(Task):
         super().__init__(id, data, list_of_dict)
 
     def solve(self):
-
-        self.logger.info("Started working on state mean job with id: %d.", self.id)
+        # time.sleep(5)
+        # self.logger.info("Started working on state mean job with id: %d.", self.id)
 
         total_sum = 0
         total_count = 0
@@ -103,7 +103,7 @@ class BestFiveTask(Task):
         super().__init__(id, data, list_of_dict)
 
     def solve(self):
-        self.logger.info("Started working on best five task job with id: %d.", self.id)
+        # self.logger.info("Started working on best five task job with id: %d.", self.id)
         response_dict = StatesMeanTask(self.id, self.data, self.list_of_dict, True).solve()
 
         if len(list(response_dict.items())) < 5:
@@ -119,7 +119,7 @@ class WorstFiveTask(Task):
         super().__init__(id, data, list_of_dict)
 
     def solve(self):
-        self.logger.info("Started working on worst five task job with id: %d.", self.id)
+        # self.logger.info("Started working on worst five task job with id: %d.", self.id)
         response_dict = StatesMeanTask(self.id, self.data, self.list_of_dict, True).solve()
 
         if len(list(response_dict.items())) < 5:
@@ -136,7 +136,7 @@ class GlobalMeanTask(Task):
         super().__init__(id, data, list_of_dict)
 
     def solve(self):
-        self.logger.info("Started working on global mean task job with id: %d.", self.id)
+        # self.logger.info("Started working on global mean task job with id: %d.", self.id)
 
         total_sum = 0
         total_count = 0
@@ -147,7 +147,7 @@ class GlobalMeanTask(Task):
                 total_count += 1
 
         if total_count == 0:
-            self.error("(GlobalMeanTask): Given question does not have enough responders.")
+            self.logger.error("(GlobalMeanTask): Given question does not have enough responders.")
             return {"error": "Given question does not have enough responders."}
         
         mean = total_sum / total_count
@@ -162,26 +162,50 @@ class DiffFromMeanTask(Task):
         super().__init__(id, data, list_of_dict)
 
     def solve(self):
-        self.logger.info("Started working on diff from mean task job with id: %d.", self.id)
+        # self.logger.info("Started working on diff from mean task job with id: %d.", self.id)
 
-        global_mean_dict = GlobalMeanTask(self.id, self.data, self.list_of_dict).solve()
+        # global_mean_dict = GlobalMeanTask(self.id, self.data, self.list_of_dict).solve()
 
-        if "error" in global_mean_dict:
-            # it will be logged by GlobalMeanTask
-            return global_mean_dict
+        # if "error" in global_mean_dict:
+        #     # it will be logged by GlobalMeanTask
+        #     return global_mean_dict
         
-        global_mean = float(global_mean_dict["global_mean"])
+        # global_mean = float(global_mean_dict["global_mean"])
 
-        states_mean_dict = StatesMeanTask(self.id, self.data, self.list_of_dict).solve()
+        # states_mean_dict = StatesMeanTask(self.id, self.data, self.list_of_dict).solve()
 
+        # response_dict = {}
+
+        # for state in states_mean_dict:
+        #     response_dict[state] = global_mean - float(states_mean_dict[state])
+
+        # self.logger.info("Processed the results on diff from mean task job with id: %d.", self.id)
+
+        # return response_dict
         response_dict = {}
+        global_resp_count = 0
+        global_resp_sum = 0
 
-        for state in states_mean_dict:
-            response_dict[state] = global_mean - float(states_mean_dict[state])
+        for dict_entry in self.list_of_dict:
+            if dict_entry['Question'] == self.data['question']:
+                global_resp_count += 1
+                global_resp_sum += float(dict_entry['Data_Value'])
 
+                if dict_entry['LocationDesc'] in response_dict:
+                    response_dict[dict_entry['LocationDesc']].append(float(dict_entry['Data_Value']))
+                else:
+                    response_dict[dict_entry['LocationDesc']] = [float(dict_entry['Data_Value'])]
+
+        if global_resp_count == 0:
+            self.logger.error("(DiffFromMeanTask): Given question does not have enough responders.")
+            return {"error": "Given question does not have enough responders."}
+        
+        for state in response_dict:
+            response_dict[state] = (global_resp_sum / global_resp_count ) - self.calculate_mean(response_dict[state])
+        
         self.logger.info("Processed the results on diff from mean task job with id: %d.", self.id)
-
         return response_dict
+
 
 
 class StateDiffFromMeanTask(Task):
@@ -189,22 +213,44 @@ class StateDiffFromMeanTask(Task):
         super().__init__(id, data, list_of_dict)
 
     def solve(self):
-        self.logger.info("Started working on state diff from mean task job with id: %d.", self.id)
+        # self.logger.info("Started working on state diff from mean task job with id: %d.", self.id)
 
-        global_mean_dict = GlobalMeanTask(self.id, self.data, self.list_of_dict).solve()
-        if "error" in global_mean_dict:
-            # it will be logged by GlobalMeanTask
-            return global_mean_dict
+        # global_mean_dict = GlobalMeanTask(self.id, self.data, self.list_of_dict).solve()
+        # if "error" in global_mean_dict:
+        #     # it will be logged by GlobalMeanTask
+        #     return global_mean_dict
         
-        global_mean = float(global_mean_dict["global_mean"])
+        # global_mean = float(global_mean_dict["global_mean"])
 
-        state_mean_dict = StateMeanTask(self.id, self.data, self.list_of_dict).solve()
-        state_mean = float(state_mean_dict[self.data["state"]])
+        # state_mean_dict = StateMeanTask(self.id, self.data, self.list_of_dict).solve()
+        # state_mean = float(state_mean_dict[self.data["state"]])
         
-        res = global_mean - state_mean
+        # res = global_mean - state_mean
 
-        self.logger.info("Processed the results o state diff from mean task job with id: %d.", self.id)
+        # self.logger.info("Processed the results o state diff from mean task job with id: %d.", self.id)
 
+        # return {self.data["state"]: res} 
+        global_resp_count = 0
+        global_resp_sum = 0
+
+        state_sum = 0
+        state_count = 0
+
+        for dict_entry in self.list_of_dict:
+            if dict_entry['Question'] == self.data['question']:
+                global_resp_count += 1
+                global_resp_sum += float(dict_entry['Data_Value'])
+
+                if dict_entry['LocationDesc'] == self.data['state']:
+                    state_count += 1
+                    state_sum += float(dict_entry['Data_Value'])
+
+        if global_resp_count == 0 or state_count == 0:
+            self.logger.error("(StateDiffFromMeanTask): Given question does not have enough responders.")
+            return {"error": "Given question does not have enough responders."}
+        
+        res = (global_resp_sum / global_resp_count) - (state_sum / state_count)
+        self.logger.info("Processed the results on state diff from mean task job with id: %d.", self.id)
         return {self.data["state"]: res} 
     
 
@@ -213,7 +259,7 @@ class MeanByCategoryTask(Task):
         super().__init__(id, data, list_of_dict)
 
     def solve(self):
-        self.logger.info("Started working on mean by category task job with id: %d.", self.id)
+        # self.logger.info("Started working on mean by category task job with id: %d.", self.id)
 
         response_dict = {}
 
@@ -244,7 +290,7 @@ class StateMeanByCategoryTask(Task):
         super().__init__(id, data, list_of_dict)
 
     def solve(self):
-        self.logger.info("Started working on state mean by category task job with id: %d.", self.id)
+        # self.logger.info("Started working on state mean by category task job with id: %d.", self.id)
 
         response_dict = {}
 

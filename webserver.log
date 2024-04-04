@@ -1,0 +1,817 @@
+2024-04-04 11:44:23,394 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification', 'state': 'Wisconsin'}.
+2024-04-04 11:44:23,440 - app.Log - INFO - Registered job state mean by category with id: 88.
+2024-04-04 11:44:23,444 - app.Log - INFO - Processed the results on state mean by category task job with id: 88.
+2024-04-04 11:44:23,449 - app.Log - INFO - Requested solution for job_88.
+2024-04-04 11:44:23,466 - app.Log - INFO - Received solution for job_88.
+2024-04-04 11:44:23,485 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily', 'state': 'Georgia'}.
+2024-04-04 11:44:23,487 - app.Log - INFO - Registered job state mean by category with id: 89.
+2024-04-04 11:44:23,490 - app.Log - INFO - Processed the results on state mean by category task job with id: 89.
+2024-04-04 11:44:23,494 - app.Log - INFO - Requested solution for job_89.
+2024-04-04 11:44:23,534 - app.Log - INFO - Received solution for job_89.
+2024-04-04 11:44:23,553 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification', 'state': 'Connecticut'}.
+2024-04-04 11:44:23,555 - app.Log - INFO - Registered job state mean by category with id: 90.
+2024-04-04 11:44:23,558 - app.Log - INFO - Processed the results on state mean by category task job with id: 90.
+2024-04-04 11:44:23,562 - app.Log - INFO - Requested solution for job_90.
+2024-04-04 11:44:23,572 - app.Log - INFO - Received solution for job_90.
+2024-04-04 11:44:23,586 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification', 'state': 'Georgia'}.
+2024-04-04 11:44:23,588 - app.Log - INFO - Registered job state mean by category with id: 91.
+2024-04-04 11:44:23,591 - app.Log - INFO - Processed the results on state mean by category task job with id: 91.
+2024-04-04 11:44:23,595 - app.Log - INFO - Requested solution for job_91.
+2024-04-04 11:44:23,606 - app.Log - INFO - Received solution for job_91.
+2024-04-04 11:44:23,620 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have obesity', 'state': 'Oklahoma'}.
+2024-04-04 11:44:23,622 - app.Log - INFO - Registered job state mean by category with id: 92.
+2024-04-04 11:44:23,625 - app.Log - INFO - Processed the results on state mean by category task job with id: 92.
+2024-04-04 11:44:23,629 - app.Log - INFO - Requested solution for job_92.
+2024-04-04 11:44:23,637 - app.Log - INFO - Received solution for job_92.
+2024-04-04 11:44:23,654 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have obesity', 'state': 'Wisconsin'}.
+2024-04-04 11:44:23,655 - app.Log - INFO - Registered job state mean by category with id: 93.
+2024-04-04 11:44:23,659 - app.Log - INFO - Processed the results on state mean by category task job with id: 93.
+2024-04-04 11:44:23,663 - app.Log - INFO - Requested solution for job_93.
+2024-04-04 11:44:23,679 - app.Log - INFO - Received solution for job_93.
+2024-04-04 11:44:23,696 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have obesity', 'state': 'Connecticut'}.
+2024-04-04 11:44:23,697 - app.Log - INFO - Registered job state mean by category with id: 94.
+2024-04-04 11:44:23,701 - app.Log - INFO - Processed the results on state mean by category task job with id: 94.
+2024-04-04 11:44:23,705 - app.Log - INFO - Requested solution for job_94.
+2024-04-04 11:44:23,734 - app.Log - INFO - Received solution for job_94.
+2024-04-04 11:44:23,755 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have obesity', 'state': 'Georgia'}.
+2024-04-04 11:44:23,757 - app.Log - INFO - Registered job state mean by category with id: 95.
+2024-04-04 11:44:23,761 - app.Log - INFO - Processed the results on state mean by category task job with id: 95.
+2024-04-04 11:44:23,766 - app.Log - INFO - Requested solution for job_95.
+2024-04-04 11:44:23,777 - app.Log - INFO - Received solution for job_95.
+2024-04-04 11:44:23,792 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week', 'state': 'Oklahoma'}.
+2024-04-04 11:44:23,793 - app.Log - INFO - Registered job state mean by category with id: 96.
+2024-04-04 11:44:23,796 - app.Log - INFO - Processed the results on state mean by category task job with id: 96.
+2024-04-04 11:44:23,801 - app.Log - INFO - Requested solution for job_96.
+2024-04-04 11:44:23,808 - app.Log - INFO - Received solution for job_96.
+2024-04-04 11:44:23,896 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification'}.
+2024-04-04 11:44:23,898 - app.Log - INFO - Registered job states mean with id: 97.
+2024-04-04 11:44:23,903 - app.Log - INFO - Processed the results on states mean job with id: 97.
+2024-04-04 11:44:23,908 - app.Log - INFO - Requested solution for job_97.
+2024-04-04 11:44:23,922 - app.Log - INFO - Received solution for job_97.
+2024-04-04 11:44:23,944 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have obesity'}.
+2024-04-04 11:44:23,946 - app.Log - INFO - Registered job states mean with id: 98.
+2024-04-04 11:44:23,951 - app.Log - INFO - Processed the results on states mean job with id: 98.
+2024-04-04 11:44:23,955 - app.Log - INFO - Requested solution for job_98.
+2024-04-04 11:44:23,966 - app.Log - INFO - Received solution for job_98.
+2024-04-04 11:44:23,984 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)'}.
+2024-04-04 11:44:23,985 - app.Log - INFO - Registered job states mean with id: 99.
+2024-04-04 11:44:23,989 - app.Log - INFO - Processed the results on states mean job with id: 99.
+2024-04-04 11:44:23,994 - app.Log - INFO - Requested solution for job_99.
+2024-04-04 11:44:24,006 - app.Log - INFO - Received solution for job_99.
+2024-04-04 11:44:24,036 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week'}.
+2024-04-04 11:44:24,039 - app.Log - INFO - Registered job states mean with id: 100.
+2024-04-04 11:44:24,042 - app.Log - INFO - Processed the results on states mean job with id: 100.
+2024-04-04 11:44:24,047 - app.Log - INFO - Requested solution for job_100.
+2024-04-04 11:44:24,060 - app.Log - INFO - Received solution for job_100.
+2024-04-04 11:44:24,082 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)'}.
+2024-04-04 11:44:24,086 - app.Log - INFO - Registered job states mean with id: 101.
+2024-04-04 11:44:24,091 - app.Log - INFO - Processed the results on states mean job with id: 101.
+2024-04-04 11:44:24,095 - app.Log - INFO - Requested solution for job_101.
+2024-04-04 11:44:24,107 - app.Log - INFO - Received solution for job_101.
+2024-04-04 11:44:24,123 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in muscle-strengthening activities on 2 or more days a week'}.
+2024-04-04 11:44:24,124 - app.Log - INFO - Registered job states mean with id: 102.
+2024-04-04 11:44:24,128 - app.Log - INFO - Processed the results on states mean job with id: 102.
+2024-04-04 11:44:24,132 - app.Log - INFO - Requested solution for job_102.
+2024-04-04 11:44:24,184 - app.Log - INFO - Received solution for job_102.
+2024-04-04 11:44:24,205 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in no leisure-time physical activity'}.
+2024-04-04 11:44:24,207 - app.Log - INFO - Registered job states mean with id: 103.
+2024-04-04 11:44:24,211 - app.Log - INFO - Processed the results on states mean job with id: 103.
+2024-04-04 11:44:24,219 - app.Log - INFO - Requested solution for job_103.
+2024-04-04 11:44:24,237 - app.Log - INFO - Received solution for job_103.
+2024-04-04 11:44:24,252 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming fruit less than one time daily'}.
+2024-04-04 11:44:24,254 - app.Log - INFO - Registered job states mean with id: 104.
+2024-04-04 11:44:24,257 - app.Log - INFO - Processed the results on states mean job with id: 104.
+2024-04-04 11:44:24,261 - app.Log - INFO - Requested solution for job_104.
+2024-04-04 11:44:24,271 - app.Log - INFO - Received solution for job_104.
+2024-04-04 11:44:24,284 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily'}.
+2024-04-04 11:44:24,286 - app.Log - INFO - Registered job states mean with id: 105.
+2024-04-04 11:44:24,290 - app.Log - INFO - Processed the results on states mean job with id: 105.
+2024-04-04 11:44:24,295 - app.Log - INFO - Requested solution for job_105.
+2024-04-04 11:44:24,305 - app.Log - INFO - Received solution for job_105.
+2024-04-04 11:44:24,367 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification'}.
+2024-04-04 11:44:24,373 - app.Log - INFO - Registered job worst five with id: 106.
+2024-04-04 11:44:24,377 - app.Log - INFO - Processed the results on worst five task job with id: 106.
+2024-04-04 11:44:24,386 - app.Log - INFO - Requested solution for job_106.
+2024-04-04 11:44:24,406 - app.Log - INFO - Received solution for job_106.
+2024-04-04 11:44:24,418 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have obesity'}.
+2024-04-04 11:44:24,420 - app.Log - INFO - Registered job worst five with id: 107.
+2024-04-04 11:44:24,424 - app.Log - INFO - Processed the results on worst five task job with id: 107.
+2024-04-04 11:44:24,432 - app.Log - INFO - Requested solution for job_107.
+2024-04-04 11:44:24,450 - app.Log - INFO - Received solution for job_107.
+2024-04-04 11:44:24,463 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)'}.
+2024-04-04 11:44:24,464 - app.Log - INFO - Registered job worst five with id: 108.
+2024-04-04 11:44:24,469 - app.Log - INFO - Processed the results on worst five task job with id: 108.
+2024-04-04 11:44:24,473 - app.Log - INFO - Requested solution for job_108.
+2024-04-04 11:44:24,479 - app.Log - INFO - Received solution for job_108.
+2024-04-04 11:44:24,492 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week'}.
+2024-04-04 11:44:24,493 - app.Log - INFO - Registered job worst five with id: 109.
+2024-04-04 11:44:24,497 - app.Log - INFO - Processed the results on worst five task job with id: 109.
+2024-04-04 11:44:24,501 - app.Log - INFO - Requested solution for job_109.
+2024-04-04 11:44:24,510 - app.Log - INFO - Received solution for job_109.
+2024-04-04 11:44:24,521 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)'}.
+2024-04-04 11:44:24,522 - app.Log - INFO - Registered job worst five with id: 110.
+2024-04-04 11:44:24,525 - app.Log - INFO - Processed the results on worst five task job with id: 110.
+2024-04-04 11:44:24,529 - app.Log - INFO - Requested solution for job_110.
+2024-04-04 11:44:24,537 - app.Log - INFO - Received solution for job_110.
+2024-04-04 11:44:24,549 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in muscle-strengthening activities on 2 or more days a week'}.
+2024-04-04 11:44:24,550 - app.Log - INFO - Registered job worst five with id: 111.
+2024-04-04 11:44:24,554 - app.Log - INFO - Processed the results on worst five task job with id: 111.
+2024-04-04 11:44:24,558 - app.Log - INFO - Requested solution for job_111.
+2024-04-04 11:44:24,566 - app.Log - INFO - Received solution for job_111.
+2024-04-04 11:44:24,577 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in no leisure-time physical activity'}.
+2024-04-04 11:44:24,579 - app.Log - INFO - Registered job worst five with id: 112.
+2024-04-04 11:44:24,583 - app.Log - INFO - Processed the results on worst five task job with id: 112.
+2024-04-04 11:44:24,587 - app.Log - INFO - Requested solution for job_112.
+2024-04-04 11:44:24,596 - app.Log - INFO - Received solution for job_112.
+2024-04-04 11:44:24,610 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming fruit less than one time daily'}.
+2024-04-04 11:44:24,611 - app.Log - INFO - Registered job worst five with id: 113.
+2024-04-04 11:44:24,615 - app.Log - INFO - Processed the results on worst five task job with id: 113.
+2024-04-04 11:44:24,619 - app.Log - INFO - Requested solution for job_113.
+2024-04-04 11:44:24,627 - app.Log - INFO - Received solution for job_113.
+2024-04-04 11:44:24,641 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily'}.
+2024-04-04 11:44:24,643 - app.Log - INFO - Registered job worst five with id: 114.
+2024-04-04 11:44:24,647 - app.Log - INFO - Processed the results on worst five task job with id: 114.
+2024-04-04 11:44:24,652 - app.Log - INFO - Requested solution for job_114.
+2024-04-04 11:44:24,660 - app.Log - INFO - Received solution for job_114.
+2024-04-04 11:45:13,349 - app.Log - INFO - Requested all jobs status.
+2024-04-04 11:45:13,350 - app.Log - INFO - Received all jobs status.
+2024-04-04 11:46:11,361 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification'}.
+2024-04-04 11:46:11,364 - app.Log - INFO - Registered job worst five with id: 1.
+2024-04-04 11:46:11,371 - app.Log - INFO - Processed the results on worst five task job with id: 1.
+2024-04-04 11:46:11,492 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification'}.
+2024-04-04 11:46:11,495 - app.Log - INFO - Registered job worst five with id: 2.
+2024-04-04 11:46:11,501 - app.Log - INFO - Processed the results on worst five task job with id: 2.
+2024-04-04 11:46:11,620 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification'}.
+2024-04-04 11:46:11,622 - app.Log - INFO - Registered job worst five with id: 3.
+2024-04-04 11:46:11,627 - app.Log - INFO - Processed the results on worst five task job with id: 3.
+2024-04-04 11:46:11,937 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification'}.
+2024-04-04 11:46:11,939 - app.Log - INFO - Registered job worst five with id: 4.
+2024-04-04 11:46:11,944 - app.Log - INFO - Processed the results on worst five task job with id: 4.
+2024-04-04 11:46:12,002 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification'}.
+2024-04-04 11:46:12,005 - app.Log - INFO - Registered job worst five with id: 5.
+2024-04-04 11:46:12,009 - app.Log - INFO - Processed the results on worst five task job with id: 5.
+2024-04-04 11:46:15,238 - app.Log - INFO - Requested all jobs status.
+2024-04-04 11:46:15,253 - app.Log - INFO - Received all jobs status.
+2024-04-04 11:49:41,726 - app.Log - INFO - Requested solution for job_1000.
+2024-04-04 11:49:41,727 - app.Log - ERROR - Server received request for an invalid job id: 1000.
+2024-04-04 11:49:41,732 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Delaware'}.
+2024-04-04 11:49:41,733 - app.Log - INFO - Registered job state diff from mean with id: 1.
+2024-04-04 11:49:41,737 - app.Log - INFO - Processed the results on state diff from mean task job with id: 1.
+2024-04-04 11:49:41,743 - app.Log - INFO - Requested solution for job_1.
+2024-04-04 11:49:41,768 - app.Log - INFO - Received solution for job_1.
+2024-04-04 11:49:41,786 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification', 'state': 'West Virginia'}.
+2024-04-04 11:49:41,789 - app.Log - INFO - Registered job state mean by category with id: 2.
+2024-04-04 11:49:41,793 - app.Log - INFO - Processed the results on state mean by category task job with id: 2.
+2024-04-04 11:49:41,798 - app.Log - INFO - Requested solution for job_2.
+2024-04-04 11:49:41,819 - app.Log - INFO - Received solution for job_2.
+2024-04-04 11:49:41,832 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in no leisure-time physical activity'}.
+2024-04-04 11:49:41,834 - app.Log - INFO - Registered job states mean with id: 3.
+2024-04-04 11:49:41,839 - app.Log - INFO - Processed the results on states mean job with id: 3.
+2024-04-04 11:49:41,843 - app.Log - INFO - Requested solution for job_3.
+2024-04-04 11:49:41,862 - app.Log - INFO - Received solution for job_3.
+2024-04-04 11:49:41,874 - app.Log - INFO - Requested server shutdown.
+2024-04-04 11:49:41,877 - app.Log - INFO - Server closed the threadpool.
+2024-04-04 11:49:41,881 - app.Log - INFO - Requested all jobs status.
+2024-04-04 11:49:41,894 - app.Log - INFO - Received all jobs status.
+2024-04-04 11:49:41,905 - app.Log - INFO - Requested server shutdown.
+2024-04-04 11:49:41,907 - app.Log - INFO - Server closed the threadpool.
+2024-04-04 11:49:41,911 - app.Log - INFO - Requested number of jobs that are still waiting.
+2024-04-04 11:49:41,921 - app.Log - INFO - Received a total of 0 unsolved jobs.
+2024-04-04 11:49:41,927 - app.Log - INFO - Requested server shutdown.
+2024-04-04 11:49:41,929 - app.Log - INFO - Server closed the threadpool.
+2024-04-04 11:49:41,937 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Delaware'}.
+2024-04-04 11:49:41,939 - app.Log - ERROR - Server received request but it's closed
+2024-04-04 11:49:41,943 - app.Log - INFO - Requested server shutdown.
+2024-04-04 11:49:41,945 - app.Log - INFO - Server closed the threadpool.
+2024-04-04 11:51:30,542 - app.Log - INFO - Requested solution for job_1000.
+2024-04-04 11:51:30,543 - app.Log - ERROR - Server received request for an invalid job id: 1000.
+2024-04-04 11:51:30,549 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Delaware'}.
+2024-04-04 11:51:30,550 - app.Log - INFO - Registered job state diff from mean with id: 1.
+2024-04-04 11:51:30,553 - app.Log - INFO - Processed the results on state diff from mean task job with id: 1.
+2024-04-04 11:51:30,570 - app.Log - INFO - Requested solution for job_1.
+2024-04-04 11:51:30,595 - app.Log - INFO - Received solution for job_1.
+2024-04-04 11:51:30,611 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification', 'state': 'West Virginia'}.
+2024-04-04 11:51:30,613 - app.Log - INFO - Registered job state mean by category with id: 2.
+2024-04-04 11:51:30,617 - app.Log - INFO - Processed the results on state mean by category task job with id: 2.
+2024-04-04 11:51:30,621 - app.Log - INFO - Requested solution for job_2.
+2024-04-04 11:51:30,642 - app.Log - INFO - Received solution for job_2.
+2024-04-04 11:51:30,653 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in no leisure-time physical activity'}.
+2024-04-04 11:51:30,655 - app.Log - INFO - Registered job states mean with id: 3.
+2024-04-04 11:51:30,659 - app.Log - INFO - Processed the results on states mean job with id: 3.
+2024-04-04 11:51:30,663 - app.Log - INFO - Requested solution for job_3.
+2024-04-04 11:51:30,676 - app.Log - INFO - Received solution for job_3.
+2024-04-04 11:51:30,685 - app.Log - INFO - Requested server shutdown.
+2024-04-04 11:51:30,688 - app.Log - INFO - Server closed the threadpool.
+2024-04-04 11:51:30,692 - app.Log - INFO - Requested all jobs status.
+2024-04-04 11:51:30,700 - app.Log - INFO - Received all jobs status.
+2024-04-04 11:51:30,703 - app.Log - INFO - Requested server shutdown.
+2024-04-04 11:51:30,705 - app.Log - INFO - Server closed the threadpool.
+2024-04-04 11:51:30,708 - app.Log - INFO - Requested number of jobs that are still waiting.
+2024-04-04 11:51:30,716 - app.Log - INFO - Received a total of 0 unsolved jobs.
+2024-04-04 11:51:30,719 - app.Log - INFO - Requested server shutdown.
+2024-04-04 11:51:30,722 - app.Log - INFO - Server closed the threadpool.
+2024-04-04 11:51:30,731 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Delaware'}.
+2024-04-04 11:51:30,733 - app.Log - ERROR - Server received request but it's closed
+2024-04-04 11:51:30,738 - app.Log - INFO - Requested server shutdown.
+2024-04-04 11:51:30,739 - app.Log - INFO - Server closed the threadpool.
+2024-04-04 11:51:56,177 - app.Log - INFO - Requested solution for job_1000.
+2024-04-04 11:51:56,178 - app.Log - ERROR - Server received request for an invalid job id: 1000.
+2024-04-04 11:51:56,184 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Delaware'}.
+2024-04-04 11:51:56,185 - app.Log - INFO - Registered job state diff from mean with id: 1.
+2024-04-04 11:51:56,189 - app.Log - INFO - Processed the results on state diff from mean task job with id: 1.
+2024-04-04 11:51:56,193 - app.Log - INFO - Requested solution for job_1.
+2024-04-04 11:51:56,225 - app.Log - INFO - Received solution for job_1.
+2024-04-04 11:51:56,242 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification', 'state': 'West Virginia'}.
+2024-04-04 11:51:56,244 - app.Log - INFO - Registered job state mean by category with id: 2.
+2024-04-04 11:51:56,248 - app.Log - INFO - Processed the results on state mean by category task job with id: 2.
+2024-04-04 11:51:56,253 - app.Log - INFO - Requested solution for job_2.
+2024-04-04 11:51:56,270 - app.Log - INFO - Received solution for job_2.
+2024-04-04 11:51:56,286 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in no leisure-time physical activity'}.
+2024-04-04 11:51:56,287 - app.Log - INFO - Registered job states mean with id: 3.
+2024-04-04 11:51:56,292 - app.Log - INFO - Processed the results on states mean job with id: 3.
+2024-04-04 11:51:56,297 - app.Log - INFO - Requested solution for job_3.
+2024-04-04 11:51:56,312 - app.Log - INFO - Received solution for job_3.
+2024-04-04 11:51:56,321 - app.Log - INFO - Requested server shutdown.
+2024-04-04 11:51:56,325 - app.Log - INFO - Server closed the threadpool.
+2024-04-04 11:51:56,328 - app.Log - INFO - Requested all jobs status.
+2024-04-04 11:51:56,336 - app.Log - INFO - Received all jobs status.
+2024-04-04 11:51:56,340 - app.Log - INFO - Requested server shutdown.
+2024-04-04 11:51:56,341 - app.Log - INFO - Server closed the threadpool.
+2024-04-04 11:51:56,345 - app.Log - INFO - Requested number of jobs that are still waiting.
+2024-04-04 11:51:56,352 - app.Log - INFO - Received a total of 0 unsolved jobs.
+2024-04-04 11:51:56,357 - app.Log - INFO - Requested server shutdown.
+2024-04-04 11:51:56,358 - app.Log - INFO - Server closed the threadpool.
+2024-04-04 11:51:56,367 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Delaware'}.
+2024-04-04 11:51:56,368 - app.Log - ERROR - Server received request but it's closed
+2024-04-04 11:51:56,371 - app.Log - INFO - Requested server shutdown.
+2024-04-04 11:51:56,372 - app.Log - INFO - Server closed the threadpool.
+2024-04-04 11:52:25,141 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification'}.
+2024-04-04 11:52:25,142 - app.Log - INFO - Registered job best five with id: 1.
+2024-04-04 11:52:25,149 - app.Log - INFO - Processed the results on best five task job with id: 1.
+2024-04-04 11:52:25,152 - app.Log - INFO - Requested solution for job_1.
+2024-04-04 11:52:25,172 - app.Log - INFO - Received solution for job_1.
+2024-04-04 11:52:25,189 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have obesity'}.
+2024-04-04 11:52:25,191 - app.Log - INFO - Registered job best five with id: 2.
+2024-04-04 11:52:25,196 - app.Log - INFO - Processed the results on best five task job with id: 2.
+2024-04-04 11:52:25,200 - app.Log - INFO - Requested solution for job_2.
+2024-04-04 11:52:25,214 - app.Log - INFO - Received solution for job_2.
+2024-04-04 11:52:25,237 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)'}.
+2024-04-04 11:52:25,239 - app.Log - INFO - Registered job best five with id: 3.
+2024-04-04 11:52:25,243 - app.Log - INFO - Processed the results on best five task job with id: 3.
+2024-04-04 11:52:25,247 - app.Log - INFO - Requested solution for job_3.
+2024-04-04 11:52:25,260 - app.Log - INFO - Received solution for job_3.
+2024-04-04 11:52:25,278 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week'}.
+2024-04-04 11:52:25,280 - app.Log - INFO - Registered job best five with id: 4.
+2024-04-04 11:52:25,284 - app.Log - INFO - Processed the results on best five task job with id: 4.
+2024-04-04 11:52:25,289 - app.Log - INFO - Requested solution for job_4.
+2024-04-04 11:52:25,300 - app.Log - INFO - Received solution for job_4.
+2024-04-04 11:52:25,321 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)'}.
+2024-04-04 11:52:25,323 - app.Log - INFO - Registered job best five with id: 5.
+2024-04-04 11:52:25,327 - app.Log - INFO - Processed the results on best five task job with id: 5.
+2024-04-04 11:52:25,331 - app.Log - INFO - Requested solution for job_5.
+2024-04-04 11:52:25,344 - app.Log - INFO - Received solution for job_5.
+2024-04-04 11:52:25,361 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in muscle-strengthening activities on 2 or more days a week'}.
+2024-04-04 11:52:25,363 - app.Log - INFO - Registered job best five with id: 6.
+2024-04-04 11:52:25,367 - app.Log - INFO - Processed the results on best five task job with id: 6.
+2024-04-04 11:52:25,371 - app.Log - INFO - Requested solution for job_6.
+2024-04-04 11:52:25,386 - app.Log - INFO - Received solution for job_6.
+2024-04-04 11:52:25,406 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in no leisure-time physical activity'}.
+2024-04-04 11:52:25,408 - app.Log - INFO - Registered job best five with id: 7.
+2024-04-04 11:52:25,413 - app.Log - INFO - Processed the results on best five task job with id: 7.
+2024-04-04 11:52:25,416 - app.Log - INFO - Requested solution for job_7.
+2024-04-04 11:52:25,432 - app.Log - INFO - Received solution for job_7.
+2024-04-04 11:52:25,447 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming fruit less than one time daily'}.
+2024-04-04 11:52:25,449 - app.Log - INFO - Registered job best five with id: 8.
+2024-04-04 11:52:25,453 - app.Log - INFO - Processed the results on best five task job with id: 8.
+2024-04-04 11:52:25,458 - app.Log - INFO - Requested solution for job_8.
+2024-04-04 11:52:25,473 - app.Log - INFO - Received solution for job_8.
+2024-04-04 11:52:25,493 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily'}.
+2024-04-04 11:52:25,495 - app.Log - INFO - Registered job best five with id: 9.
+2024-04-04 11:52:25,499 - app.Log - INFO - Processed the results on best five task job with id: 9.
+2024-04-04 11:52:25,503 - app.Log - INFO - Requested solution for job_9.
+2024-04-04 11:52:25,516 - app.Log - INFO - Received solution for job_9.
+2024-04-04 11:52:25,573 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification'}.
+2024-04-04 11:52:25,574 - app.Log - INFO - Registered job diff from mean with id: 10.
+2024-04-04 11:52:25,581 - app.Log - INFO - Processed the results on diff from mean task job with id: 10.
+2024-04-04 11:52:25,584 - app.Log - INFO - Requested solution for job_10.
+2024-04-04 11:52:25,596 - app.Log - INFO - Received solution for job_10.
+2024-04-04 11:52:25,617 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have obesity'}.
+2024-04-04 11:52:25,619 - app.Log - INFO - Registered job diff from mean with id: 11.
+2024-04-04 11:52:25,625 - app.Log - INFO - Processed the results on diff from mean task job with id: 11.
+2024-04-04 11:52:25,629 - app.Log - INFO - Requested solution for job_11.
+2024-04-04 11:52:25,640 - app.Log - INFO - Received solution for job_11.
+2024-04-04 11:52:25,655 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)'}.
+2024-04-04 11:52:25,657 - app.Log - INFO - Registered job diff from mean with id: 12.
+2024-04-04 11:52:25,661 - app.Log - INFO - Processed the results on diff from mean task job with id: 12.
+2024-04-04 11:52:25,666 - app.Log - INFO - Requested solution for job_12.
+2024-04-04 11:52:25,674 - app.Log - INFO - Received solution for job_12.
+2024-04-04 11:52:25,687 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week'}.
+2024-04-04 11:52:25,688 - app.Log - INFO - Registered job diff from mean with id: 13.
+2024-04-04 11:52:25,693 - app.Log - INFO - Processed the results on diff from mean task job with id: 13.
+2024-04-04 11:52:25,697 - app.Log - INFO - Requested solution for job_13.
+2024-04-04 11:52:25,707 - app.Log - INFO - Received solution for job_13.
+2024-04-04 11:52:25,722 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)'}.
+2024-04-04 11:52:25,724 - app.Log - INFO - Registered job diff from mean with id: 14.
+2024-04-04 11:52:25,728 - app.Log - INFO - Processed the results on diff from mean task job with id: 14.
+2024-04-04 11:52:25,732 - app.Log - INFO - Requested solution for job_14.
+2024-04-04 11:52:25,739 - app.Log - INFO - Received solution for job_14.
+2024-04-04 11:52:25,752 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in muscle-strengthening activities on 2 or more days a week'}.
+2024-04-04 11:52:25,753 - app.Log - INFO - Registered job diff from mean with id: 15.
+2024-04-04 11:52:25,757 - app.Log - INFO - Processed the results on diff from mean task job with id: 15.
+2024-04-04 11:52:25,761 - app.Log - INFO - Requested solution for job_15.
+2024-04-04 11:52:25,769 - app.Log - INFO - Received solution for job_15.
+2024-04-04 11:52:25,783 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in no leisure-time physical activity'}.
+2024-04-04 11:52:25,785 - app.Log - INFO - Registered job diff from mean with id: 16.
+2024-04-04 11:52:25,792 - app.Log - INFO - Processed the results on diff from mean task job with id: 16.
+2024-04-04 11:52:25,794 - app.Log - INFO - Requested solution for job_16.
+2024-04-04 11:52:25,803 - app.Log - INFO - Received solution for job_16.
+2024-04-04 11:52:25,818 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming fruit less than one time daily'}.
+2024-04-04 11:52:25,819 - app.Log - INFO - Registered job diff from mean with id: 17.
+2024-04-04 11:52:25,824 - app.Log - INFO - Processed the results on diff from mean task job with id: 17.
+2024-04-04 11:52:25,828 - app.Log - INFO - Requested solution for job_17.
+2024-04-04 11:52:25,837 - app.Log - INFO - Received solution for job_17.
+2024-04-04 11:52:25,848 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily'}.
+2024-04-04 11:52:25,849 - app.Log - INFO - Registered job diff from mean with id: 18.
+2024-04-04 11:52:25,853 - app.Log - INFO - Processed the results on diff from mean task job with id: 18.
+2024-04-04 11:52:25,857 - app.Log - INFO - Requested solution for job_18.
+2024-04-04 11:52:25,863 - app.Log - INFO - Received solution for job_18.
+2024-04-04 11:52:25,905 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification'}.
+2024-04-04 11:52:25,906 - app.Log - INFO - Registered job global mean with id 19.
+2024-04-04 11:52:25,910 - app.Log - INFO - Processed the results on global mean task job with id: 19.
+2024-04-04 11:52:25,914 - app.Log - INFO - Requested solution for job_19.
+2024-04-04 11:52:25,919 - app.Log - INFO - Received solution for job_19.
+2024-04-04 11:52:25,930 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have obesity'}.
+2024-04-04 11:52:25,932 - app.Log - INFO - Registered job global mean with id 20.
+2024-04-04 11:52:25,936 - app.Log - INFO - Processed the results on global mean task job with id: 20.
+2024-04-04 11:52:25,940 - app.Log - INFO - Requested solution for job_20.
+2024-04-04 11:52:25,947 - app.Log - INFO - Received solution for job_20.
+2024-04-04 11:52:25,957 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)'}.
+2024-04-04 11:52:25,959 - app.Log - INFO - Registered job global mean with id 21.
+2024-04-04 11:52:25,963 - app.Log - INFO - Processed the results on global mean task job with id: 21.
+2024-04-04 11:52:25,967 - app.Log - INFO - Requested solution for job_21.
+2024-04-04 11:52:25,977 - app.Log - INFO - Received solution for job_21.
+2024-04-04 11:52:25,987 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week'}.
+2024-04-04 11:52:25,988 - app.Log - INFO - Registered job global mean with id 22.
+2024-04-04 11:52:25,992 - app.Log - INFO - Processed the results on global mean task job with id: 22.
+2024-04-04 11:52:25,996 - app.Log - INFO - Requested solution for job_22.
+2024-04-04 11:52:26,001 - app.Log - INFO - Received solution for job_22.
+2024-04-04 11:52:26,012 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)'}.
+2024-04-04 11:52:26,013 - app.Log - INFO - Registered job global mean with id 23.
+2024-04-04 11:52:26,017 - app.Log - INFO - Processed the results on global mean task job with id: 23.
+2024-04-04 11:52:26,021 - app.Log - INFO - Requested solution for job_23.
+2024-04-04 11:52:26,028 - app.Log - INFO - Received solution for job_23.
+2024-04-04 11:52:26,038 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in muscle-strengthening activities on 2 or more days a week'}.
+2024-04-04 11:52:26,039 - app.Log - INFO - Registered job global mean with id 24.
+2024-04-04 11:52:26,043 - app.Log - INFO - Processed the results on global mean task job with id: 24.
+2024-04-04 11:52:26,047 - app.Log - INFO - Requested solution for job_24.
+2024-04-04 11:52:26,053 - app.Log - INFO - Received solution for job_24.
+2024-04-04 11:52:26,064 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in no leisure-time physical activity'}.
+2024-04-04 11:52:26,066 - app.Log - INFO - Registered job global mean with id 25.
+2024-04-04 11:52:26,070 - app.Log - INFO - Processed the results on global mean task job with id: 25.
+2024-04-04 11:52:26,074 - app.Log - INFO - Requested solution for job_25.
+2024-04-04 11:52:26,081 - app.Log - INFO - Received solution for job_25.
+2024-04-04 11:52:26,091 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming fruit less than one time daily'}.
+2024-04-04 11:52:26,093 - app.Log - INFO - Registered job global mean with id 26.
+2024-04-04 11:52:26,096 - app.Log - INFO - Processed the results on global mean task job with id: 26.
+2024-04-04 11:52:26,100 - app.Log - INFO - Requested solution for job_26.
+2024-04-04 11:52:26,108 - app.Log - INFO - Received solution for job_26.
+2024-04-04 11:52:26,128 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily'}.
+2024-04-04 11:52:26,129 - app.Log - INFO - Registered job global mean with id 27.
+2024-04-04 11:52:26,133 - app.Log - INFO - Processed the results on global mean task job with id: 27.
+2024-04-04 11:52:26,138 - app.Log - INFO - Requested solution for job_27.
+2024-04-04 11:52:26,153 - app.Log - INFO - Received solution for job_27.
+2024-04-04 11:52:26,222 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification'}.
+2024-04-04 11:52:26,223 - app.Log - INFO - Registered job mean by category with id: 28.
+2024-04-04 11:52:26,232 - app.Log - INFO - Processed the results on mean by category task job with id: 28.
+2024-04-04 11:52:26,236 - app.Log - INFO - Requested solution for job_28.
+2024-04-04 11:52:26,252 - app.Log - INFO - Received solution for job_28.
+2024-04-04 11:52:26,289 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have obesity'}.
+2024-04-04 11:52:26,291 - app.Log - INFO - Registered job mean by category with id: 29.
+2024-04-04 11:52:26,298 - app.Log - INFO - Processed the results on mean by category task job with id: 29.
+2024-04-04 11:52:26,303 - app.Log - INFO - Requested solution for job_29.
+2024-04-04 11:52:26,323 - app.Log - INFO - Received solution for job_29.
+2024-04-04 11:52:26,361 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)'}.
+2024-04-04 11:52:26,362 - app.Log - INFO - Registered job mean by category with id: 30.
+2024-04-04 11:52:26,368 - app.Log - INFO - Processed the results on mean by category task job with id: 30.
+2024-04-04 11:52:26,375 - app.Log - INFO - Requested solution for job_30.
+2024-04-04 11:52:26,390 - app.Log - INFO - Received solution for job_30.
+2024-04-04 11:52:26,419 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week'}.
+2024-04-04 11:52:26,420 - app.Log - INFO - Registered job mean by category with id: 31.
+2024-04-04 11:52:26,427 - app.Log - INFO - Processed the results on mean by category task job with id: 31.
+2024-04-04 11:52:26,428 - app.Log - INFO - Requested solution for job_31.
+2024-04-04 11:52:26,444 - app.Log - INFO - Received solution for job_31.
+2024-04-04 11:52:26,480 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)'}.
+2024-04-04 11:52:26,482 - app.Log - INFO - Registered job mean by category with id: 32.
+2024-04-04 11:52:26,488 - app.Log - INFO - Processed the results on mean by category task job with id: 32.
+2024-04-04 11:52:26,491 - app.Log - INFO - Requested solution for job_32.
+2024-04-04 11:52:26,507 - app.Log - INFO - Received solution for job_32.
+2024-04-04 11:52:26,540 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in muscle-strengthening activities on 2 or more days a week'}.
+2024-04-04 11:52:26,541 - app.Log - INFO - Registered job mean by category with id: 33.
+2024-04-04 11:52:26,548 - app.Log - INFO - Processed the results on mean by category task job with id: 33.
+2024-04-04 11:52:26,552 - app.Log - INFO - Requested solution for job_33.
+2024-04-04 11:52:26,571 - app.Log - INFO - Received solution for job_33.
+2024-04-04 11:52:26,620 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in no leisure-time physical activity'}.
+2024-04-04 11:52:26,622 - app.Log - INFO - Registered job mean by category with id: 34.
+2024-04-04 11:52:26,631 - app.Log - INFO - Processed the results on mean by category task job with id: 34.
+2024-04-04 11:52:26,636 - app.Log - INFO - Requested solution for job_34.
+2024-04-04 11:52:26,656 - app.Log - INFO - Received solution for job_34.
+2024-04-04 11:52:26,694 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming fruit less than one time daily'}.
+2024-04-04 11:52:26,696 - app.Log - INFO - Registered job mean by category with id: 35.
+2024-04-04 11:52:26,701 - app.Log - INFO - Processed the results on mean by category task job with id: 35.
+2024-04-04 11:52:26,705 - app.Log - INFO - Requested solution for job_35.
+2024-04-04 11:52:26,722 - app.Log - INFO - Received solution for job_35.
+2024-04-04 11:52:26,752 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily'}.
+2024-04-04 11:52:26,755 - app.Log - INFO - Registered job mean by category with id: 36.
+2024-04-04 11:52:26,760 - app.Log - INFO - Processed the results on mean by category task job with id: 36.
+2024-04-04 11:52:26,764 - app.Log - INFO - Requested solution for job_36.
+2024-04-04 11:52:26,777 - app.Log - INFO - Received solution for job_36.
+2024-04-04 11:52:26,850 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily', 'state': 'Virgin Islands'}.
+2024-04-04 11:52:26,852 - app.Log - INFO - Registered job state diff from mean with id: 37.
+2024-04-04 11:52:26,855 - app.Log - INFO - Processed the results on state diff from mean task job with id: 37.
+2024-04-04 11:52:26,860 - app.Log - INFO - Requested solution for job_37.
+2024-04-04 11:52:26,867 - app.Log - INFO - Received solution for job_37.
+2024-04-04 11:52:26,880 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Texas'}.
+2024-04-04 11:52:26,881 - app.Log - INFO - Registered job state diff from mean with id: 38.
+2024-04-04 11:52:26,885 - app.Log - INFO - Processed the results on state diff from mean task job with id: 38.
+2024-04-04 11:52:26,889 - app.Log - INFO - Requested solution for job_38.
+2024-04-04 11:52:26,898 - app.Log - INFO - Received solution for job_38.
+2024-04-04 11:52:26,911 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Michigan'}.
+2024-04-04 11:52:26,912 - app.Log - INFO - Registered job state diff from mean with id: 39.
+2024-04-04 11:52:26,916 - app.Log - INFO - Processed the results on state diff from mean task job with id: 39.
+2024-04-04 11:52:26,919 - app.Log - INFO - Requested solution for job_39.
+2024-04-04 11:52:26,927 - app.Log - INFO - Received solution for job_39.
+2024-04-04 11:52:26,937 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Rhode Island'}.
+2024-04-04 11:52:26,938 - app.Log - INFO - Registered job state diff from mean with id: 40.
+2024-04-04 11:52:26,942 - app.Log - INFO - Processed the results on state diff from mean task job with id: 40.
+2024-04-04 11:52:26,946 - app.Log - INFO - Requested solution for job_40.
+2024-04-04 11:52:26,954 - app.Log - INFO - Received solution for job_40.
+2024-04-04 11:52:26,965 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in muscle-strengthening activities on 2 or more days a week', 'state': 'Virgin Islands'}.
+2024-04-04 11:52:26,967 - app.Log - INFO - Registered job state diff from mean with id: 41.
+2024-04-04 11:52:26,971 - app.Log - INFO - Processed the results on state diff from mean task job with id: 41.
+2024-04-04 11:52:26,976 - app.Log - INFO - Requested solution for job_41.
+2024-04-04 11:52:26,983 - app.Log - INFO - Received solution for job_41.
+2024-04-04 11:52:26,997 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in muscle-strengthening activities on 2 or more days a week', 'state': 'Texas'}.
+2024-04-04 11:52:26,999 - app.Log - INFO - Registered job state diff from mean with id: 42.
+2024-04-04 11:52:27,003 - app.Log - INFO - Processed the results on state diff from mean task job with id: 42.
+2024-04-04 11:52:27,007 - app.Log - INFO - Requested solution for job_42.
+2024-04-04 11:52:27,016 - app.Log - INFO - Received solution for job_42.
+2024-04-04 11:52:27,030 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in muscle-strengthening activities on 2 or more days a week', 'state': 'Michigan'}.
+2024-04-04 11:52:27,031 - app.Log - INFO - Registered job state diff from mean with id: 43.
+2024-04-04 11:52:27,036 - app.Log - INFO - Processed the results on state diff from mean task job with id: 43.
+2024-04-04 11:52:27,039 - app.Log - INFO - Requested solution for job_43.
+2024-04-04 11:52:27,046 - app.Log - INFO - Received solution for job_43.
+2024-04-04 11:52:27,055 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in muscle-strengthening activities on 2 or more days a week', 'state': 'Rhode Island'}.
+2024-04-04 11:52:27,057 - app.Log - INFO - Registered job state diff from mean with id: 44.
+2024-04-04 11:52:27,061 - app.Log - INFO - Processed the results on state diff from mean task job with id: 44.
+2024-04-04 11:52:27,065 - app.Log - INFO - Requested solution for job_44.
+2024-04-04 11:52:27,073 - app.Log - INFO - Received solution for job_44.
+2024-04-04 11:52:27,084 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Virgin Islands'}.
+2024-04-04 11:52:27,085 - app.Log - INFO - Registered job state diff from mean with id: 45.
+2024-04-04 11:52:27,089 - app.Log - INFO - Processed the results on state diff from mean task job with id: 45.
+2024-04-04 11:52:27,093 - app.Log - INFO - Requested solution for job_45.
+2024-04-04 11:52:27,103 - app.Log - INFO - Received solution for job_45.
+2024-04-04 11:52:27,115 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Texas'}.
+2024-04-04 11:52:27,117 - app.Log - INFO - Registered job state diff from mean with id: 46.
+2024-04-04 11:52:27,121 - app.Log - INFO - Processed the results on state diff from mean task job with id: 46.
+2024-04-04 11:52:27,125 - app.Log - INFO - Requested solution for job_46.
+2024-04-04 11:52:27,138 - app.Log - INFO - Received solution for job_46.
+2024-04-04 11:52:27,152 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Michigan'}.
+2024-04-04 11:52:27,153 - app.Log - INFO - Registered job state diff from mean with id: 47.
+2024-04-04 11:52:27,158 - app.Log - INFO - Processed the results on state diff from mean task job with id: 47.
+2024-04-04 11:52:27,162 - app.Log - INFO - Requested solution for job_47.
+2024-04-04 11:52:27,172 - app.Log - INFO - Received solution for job_47.
+2024-04-04 11:52:27,188 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily', 'state': 'Texas'}.
+2024-04-04 11:52:27,190 - app.Log - INFO - Registered job state diff from mean with id: 48.
+2024-04-04 11:52:27,194 - app.Log - INFO - Processed the results on state diff from mean task job with id: 48.
+2024-04-04 11:52:27,197 - app.Log - INFO - Requested solution for job_48.
+2024-04-04 11:52:27,206 - app.Log - INFO - Received solution for job_48.
+2024-04-04 11:52:27,219 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Rhode Island'}.
+2024-04-04 11:52:27,221 - app.Log - INFO - Registered job state diff from mean with id: 49.
+2024-04-04 11:52:27,225 - app.Log - INFO - Processed the results on state diff from mean task job with id: 49.
+2024-04-04 11:52:27,229 - app.Log - INFO - Requested solution for job_49.
+2024-04-04 11:52:27,240 - app.Log - INFO - Received solution for job_49.
+2024-04-04 11:52:27,257 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily', 'state': 'Michigan'}.
+2024-04-04 11:52:27,260 - app.Log - INFO - Registered job state diff from mean with id: 50.
+2024-04-04 11:52:27,264 - app.Log - INFO - Processed the results on state diff from mean task job with id: 50.
+2024-04-04 11:52:27,268 - app.Log - INFO - Requested solution for job_50.
+2024-04-04 11:52:27,280 - app.Log - INFO - Received solution for job_50.
+2024-04-04 11:52:27,299 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily', 'state': 'Rhode Island'}.
+2024-04-04 11:52:27,301 - app.Log - INFO - Registered job state diff from mean with id: 51.
+2024-04-04 11:52:27,305 - app.Log - INFO - Processed the results on state diff from mean task job with id: 51.
+2024-04-04 11:52:27,310 - app.Log - INFO - Requested solution for job_51.
+2024-04-04 11:52:27,327 - app.Log - INFO - Received solution for job_51.
+2024-04-04 11:52:27,345 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily', 'state': 'Virgin Islands'}.
+2024-04-04 11:52:27,346 - app.Log - INFO - Registered job state diff from mean with id: 52.
+2024-04-04 11:52:27,350 - app.Log - INFO - Processed the results on state diff from mean task job with id: 52.
+2024-04-04 11:52:27,355 - app.Log - INFO - Requested solution for job_52.
+2024-04-04 11:52:27,364 - app.Log - INFO - Received solution for job_52.
+2024-04-04 11:52:27,375 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily', 'state': 'Texas'}.
+2024-04-04 11:52:27,376 - app.Log - INFO - Registered job state diff from mean with id: 53.
+2024-04-04 11:52:27,381 - app.Log - INFO - Processed the results on state diff from mean task job with id: 53.
+2024-04-04 11:52:27,387 - app.Log - INFO - Requested solution for job_53.
+2024-04-04 11:52:27,400 - app.Log - INFO - Received solution for job_53.
+2024-04-04 11:52:27,412 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily', 'state': 'Michigan'}.
+2024-04-04 11:52:27,414 - app.Log - INFO - Registered job state diff from mean with id: 54.
+2024-04-04 11:52:27,417 - app.Log - INFO - Processed the results on state diff from mean task job with id: 54.
+2024-04-04 11:52:27,421 - app.Log - INFO - Requested solution for job_54.
+2024-04-04 11:52:27,427 - app.Log - INFO - Received solution for job_54.
+2024-04-04 11:52:27,437 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily', 'state': 'Rhode Island'}.
+2024-04-04 11:52:27,438 - app.Log - INFO - Registered job state diff from mean with id: 55.
+2024-04-04 11:52:27,442 - app.Log - INFO - Processed the results on state diff from mean task job with id: 55.
+2024-04-04 11:52:27,446 - app.Log - INFO - Requested solution for job_55.
+2024-04-04 11:52:27,455 - app.Log - INFO - Received solution for job_55.
+2024-04-04 11:52:27,466 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Virgin Islands'}.
+2024-04-04 11:52:27,467 - app.Log - INFO - Registered job state diff from mean with id: 56.
+2024-04-04 11:52:27,471 - app.Log - INFO - Processed the results on state diff from mean task job with id: 56.
+2024-04-04 11:52:27,475 - app.Log - INFO - Requested solution for job_56.
+2024-04-04 11:52:27,483 - app.Log - INFO - Received solution for job_56.
+2024-04-04 11:52:27,559 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Guam'}.
+2024-04-04 11:52:27,561 - app.Log - INFO - Registered job state mean with id: 57.
+2024-04-04 11:52:27,566 - app.Log - INFO - Processed the results on state mean job with id: 57.
+2024-04-04 11:52:27,572 - app.Log - INFO - Requested solution for job_57.
+2024-04-04 11:52:27,594 - app.Log - INFO - Received solution for job_57.
+2024-04-04 11:52:27,625 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily', 'state': 'Maine'}.
+2024-04-04 11:52:27,627 - app.Log - INFO - Registered job state mean with id: 58.
+2024-04-04 11:52:27,631 - app.Log - INFO - Processed the results on state mean job with id: 58.
+2024-04-04 11:52:27,636 - app.Log - INFO - Requested solution for job_58.
+2024-04-04 11:52:27,648 - app.Log - INFO - Received solution for job_58.
+2024-04-04 11:52:27,668 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily', 'state': 'Massachusetts'}.
+2024-04-04 11:52:27,671 - app.Log - INFO - Registered job state mean with id: 59.
+2024-04-04 11:52:27,674 - app.Log - INFO - Processed the results on state mean job with id: 59.
+2024-04-04 11:52:27,678 - app.Log - INFO - Requested solution for job_59.
+2024-04-04 11:52:27,694 - app.Log - INFO - Received solution for job_59.
+2024-04-04 11:52:27,711 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily', 'state': 'National'}.
+2024-04-04 11:52:27,713 - app.Log - INFO - Registered job state mean with id: 60.
+2024-04-04 11:52:27,716 - app.Log - INFO - Processed the results on state mean job with id: 60.
+2024-04-04 11:52:27,721 - app.Log - INFO - Requested solution for job_60.
+2024-04-04 11:52:27,735 - app.Log - INFO - Received solution for job_60.
+2024-04-04 11:52:27,761 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification', 'state': 'Guam'}.
+2024-04-04 11:52:27,763 - app.Log - INFO - Registered job state mean with id: 61.
+2024-04-04 11:52:27,766 - app.Log - INFO - Processed the results on state mean job with id: 61.
+2024-04-04 11:52:27,770 - app.Log - INFO - Requested solution for job_61.
+2024-04-04 11:52:27,789 - app.Log - INFO - Received solution for job_61.
+2024-04-04 11:52:27,808 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification', 'state': 'Maine'}.
+2024-04-04 11:52:27,813 - app.Log - INFO - Registered job state mean with id: 62.
+2024-04-04 11:52:27,817 - app.Log - INFO - Processed the results on state mean job with id: 62.
+2024-04-04 11:52:27,821 - app.Log - INFO - Requested solution for job_62.
+2024-04-04 11:52:27,842 - app.Log - INFO - Received solution for job_62.
+2024-04-04 11:52:27,874 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification', 'state': 'Massachusetts'}.
+2024-04-04 11:52:27,876 - app.Log - INFO - Registered job state mean with id: 63.
+2024-04-04 11:52:27,880 - app.Log - INFO - Processed the results on state mean job with id: 63.
+2024-04-04 11:52:27,884 - app.Log - INFO - Requested solution for job_63.
+2024-04-04 11:52:27,897 - app.Log - INFO - Received solution for job_63.
+2024-04-04 11:52:27,907 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification', 'state': 'National'}.
+2024-04-04 11:52:27,909 - app.Log - INFO - Registered job state mean with id: 64.
+2024-04-04 11:52:27,912 - app.Log - INFO - Processed the results on state mean job with id: 64.
+2024-04-04 11:52:27,916 - app.Log - INFO - Requested solution for job_64.
+2024-04-04 11:52:27,922 - app.Log - INFO - Received solution for job_64.
+2024-04-04 11:52:27,932 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week', 'state': 'Guam'}.
+2024-04-04 11:52:27,934 - app.Log - INFO - Registered job state mean with id: 65.
+2024-04-04 11:52:27,937 - app.Log - INFO - Processed the results on state mean job with id: 65.
+2024-04-04 11:52:27,941 - app.Log - INFO - Requested solution for job_65.
+2024-04-04 11:52:27,951 - app.Log - INFO - Received solution for job_65.
+2024-04-04 11:52:27,966 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week', 'state': 'Maine'}.
+2024-04-04 11:52:27,968 - app.Log - INFO - Registered job state mean with id: 66.
+2024-04-04 11:52:27,971 - app.Log - INFO - Processed the results on state mean job with id: 66.
+2024-04-04 11:52:27,976 - app.Log - INFO - Requested solution for job_66.
+2024-04-04 11:52:27,984 - app.Log - INFO - Received solution for job_66.
+2024-04-04 11:52:27,999 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week', 'state': 'Massachusetts'}.
+2024-04-04 11:52:28,001 - app.Log - INFO - Registered job state mean with id: 67.
+2024-04-04 11:52:28,005 - app.Log - INFO - Processed the results on state mean job with id: 67.
+2024-04-04 11:52:28,009 - app.Log - INFO - Requested solution for job_67.
+2024-04-04 11:52:28,021 - app.Log - INFO - Received solution for job_67.
+2024-04-04 11:52:28,038 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Maine'}.
+2024-04-04 11:52:28,040 - app.Log - INFO - Registered job state mean with id: 68.
+2024-04-04 11:52:28,044 - app.Log - INFO - Processed the results on state mean job with id: 68.
+2024-04-04 11:52:28,049 - app.Log - INFO - Requested solution for job_68.
+2024-04-04 11:52:28,061 - app.Log - INFO - Received solution for job_68.
+2024-04-04 11:52:28,079 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week', 'state': 'National'}.
+2024-04-04 11:52:28,082 - app.Log - INFO - Registered job state mean with id: 69.
+2024-04-04 11:52:28,087 - app.Log - INFO - Processed the results on state mean job with id: 69.
+2024-04-04 11:52:28,091 - app.Log - INFO - Requested solution for job_69.
+2024-04-04 11:52:28,102 - app.Log - INFO - Received solution for job_69.
+2024-04-04 11:52:28,116 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Massachusetts'}.
+2024-04-04 11:52:28,118 - app.Log - INFO - Registered job state mean with id: 70.
+2024-04-04 11:52:28,121 - app.Log - INFO - Processed the results on state mean job with id: 70.
+2024-04-04 11:52:28,125 - app.Log - INFO - Requested solution for job_70.
+2024-04-04 11:52:28,134 - app.Log - INFO - Received solution for job_70.
+2024-04-04 11:52:28,144 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'National'}.
+2024-04-04 11:52:28,145 - app.Log - INFO - Registered job state mean with id: 71.
+2024-04-04 11:52:28,148 - app.Log - INFO - Processed the results on state mean job with id: 71.
+2024-04-04 11:52:28,152 - app.Log - INFO - Requested solution for job_71.
+2024-04-04 11:52:28,161 - app.Log - INFO - Received solution for job_71.
+2024-04-04 11:52:28,172 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Guam'}.
+2024-04-04 11:52:28,173 - app.Log - INFO - Registered job state mean with id: 72.
+2024-04-04 11:52:28,177 - app.Log - INFO - Processed the results on state mean job with id: 72.
+2024-04-04 11:52:28,180 - app.Log - INFO - Requested solution for job_72.
+2024-04-04 11:52:28,187 - app.Log - INFO - Received solution for job_72.
+2024-04-04 11:52:28,197 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Maine'}.
+2024-04-04 11:52:28,199 - app.Log - INFO - Registered job state mean with id: 73.
+2024-04-04 11:52:28,202 - app.Log - INFO - Processed the results on state mean job with id: 73.
+2024-04-04 11:52:28,206 - app.Log - INFO - Requested solution for job_73.
+2024-04-04 11:52:28,216 - app.Log - INFO - Received solution for job_73.
+2024-04-04 11:52:28,227 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'Massachusetts'}.
+2024-04-04 11:52:28,228 - app.Log - INFO - Registered job state mean with id: 74.
+2024-04-04 11:52:28,232 - app.Log - INFO - Processed the results on state mean job with id: 74.
+2024-04-04 11:52:28,236 - app.Log - INFO - Requested solution for job_74.
+2024-04-04 11:52:28,244 - app.Log - INFO - Received solution for job_74.
+2024-04-04 11:52:28,257 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)', 'state': 'National'}.
+2024-04-04 11:52:28,258 - app.Log - INFO - Registered job state mean with id: 75.
+2024-04-04 11:52:28,262 - app.Log - INFO - Processed the results on state mean job with id: 75.
+2024-04-04 11:52:28,266 - app.Log - INFO - Requested solution for job_75.
+2024-04-04 11:52:28,273 - app.Log - INFO - Received solution for job_75.
+2024-04-04 11:52:28,287 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily', 'state': 'Guam'}.
+2024-04-04 11:52:28,290 - app.Log - INFO - Registered job state mean with id: 76.
+2024-04-04 11:52:28,293 - app.Log - INFO - Processed the results on state mean job with id: 76.
+2024-04-04 11:52:28,298 - app.Log - INFO - Requested solution for job_76.
+2024-04-04 11:52:28,310 - app.Log - INFO - Received solution for job_76.
+2024-04-04 11:52:28,437 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification', 'state': 'Oklahoma'}.
+2024-04-04 11:52:28,439 - app.Log - INFO - Registered job state mean by category with id: 77.
+2024-04-04 11:52:28,443 - app.Log - INFO - Processed the results on state mean by category task job with id: 77.
+2024-04-04 11:52:28,447 - app.Log - INFO - Requested solution for job_77.
+2024-04-04 11:52:28,455 - app.Log - INFO - Received solution for job_77.
+2024-04-04 11:52:28,466 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week', 'state': 'Wisconsin'}.
+2024-04-04 11:52:28,467 - app.Log - INFO - Registered job state mean by category with id: 78.
+2024-04-04 11:52:28,471 - app.Log - INFO - Processed the results on state mean by category task job with id: 78.
+2024-04-04 11:52:28,475 - app.Log - INFO - Requested solution for job_78.
+2024-04-04 11:52:28,481 - app.Log - INFO - Received solution for job_78.
+2024-04-04 11:52:28,491 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week', 'state': 'Connecticut'}.
+2024-04-04 11:52:28,492 - app.Log - INFO - Registered job state mean by category with id: 79.
+2024-04-04 11:52:28,496 - app.Log - INFO - Processed the results on state mean by category task job with id: 79.
+2024-04-04 11:52:28,499 - app.Log - INFO - Requested solution for job_79.
+2024-04-04 11:52:28,506 - app.Log - INFO - Received solution for job_79.
+2024-04-04 11:52:28,517 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week', 'state': 'Georgia'}.
+2024-04-04 11:52:28,519 - app.Log - INFO - Registered job state mean by category with id: 80.
+2024-04-04 11:52:28,522 - app.Log - INFO - Processed the results on state mean by category task job with id: 80.
+2024-04-04 11:52:28,527 - app.Log - INFO - Requested solution for job_80.
+2024-04-04 11:52:28,538 - app.Log - INFO - Received solution for job_80.
+2024-04-04 11:52:28,551 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in muscle-strengthening activities on 2 or more days a week', 'state': 'Oklahoma'}.
+2024-04-04 11:52:28,553 - app.Log - INFO - Registered job state mean by category with id: 81.
+2024-04-04 11:52:28,557 - app.Log - INFO - Processed the results on state mean by category task job with id: 81.
+2024-04-04 11:52:28,561 - app.Log - INFO - Requested solution for job_81.
+2024-04-04 11:52:28,574 - app.Log - INFO - Received solution for job_81.
+2024-04-04 11:52:28,596 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in muscle-strengthening activities on 2 or more days a week', 'state': 'Wisconsin'}.
+2024-04-04 11:52:28,598 - app.Log - INFO - Registered job state mean by category with id: 82.
+2024-04-04 11:52:28,603 - app.Log - INFO - Processed the results on state mean by category task job with id: 82.
+2024-04-04 11:52:28,610 - app.Log - INFO - Requested solution for job_82.
+2024-04-04 11:52:28,633 - app.Log - INFO - Received solution for job_82.
+2024-04-04 11:52:28,651 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in muscle-strengthening activities on 2 or more days a week', 'state': 'Connecticut'}.
+2024-04-04 11:52:28,654 - app.Log - INFO - Registered job state mean by category with id: 83.
+2024-04-04 11:52:28,657 - app.Log - INFO - Processed the results on state mean by category task job with id: 83.
+2024-04-04 11:52:28,663 - app.Log - INFO - Requested solution for job_83.
+2024-04-04 11:52:28,677 - app.Log - INFO - Received solution for job_83.
+2024-04-04 11:52:28,698 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in muscle-strengthening activities on 2 or more days a week', 'state': 'Georgia'}.
+2024-04-04 11:52:28,700 - app.Log - INFO - Registered job state mean by category with id: 84.
+2024-04-04 11:52:28,704 - app.Log - INFO - Processed the results on state mean by category task job with id: 84.
+2024-04-04 11:52:28,708 - app.Log - INFO - Requested solution for job_84.
+2024-04-04 11:52:28,729 - app.Log - INFO - Received solution for job_84.
+2024-04-04 11:52:28,757 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily', 'state': 'Oklahoma'}.
+2024-04-04 11:52:28,759 - app.Log - INFO - Registered job state mean by category with id: 85.
+2024-04-04 11:52:28,764 - app.Log - INFO - Processed the results on state mean by category task job with id: 85.
+2024-04-04 11:52:28,770 - app.Log - INFO - Requested solution for job_85.
+2024-04-04 11:52:28,789 - app.Log - INFO - Received solution for job_85.
+2024-04-04 11:52:28,815 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily', 'state': 'Wisconsin'}.
+2024-04-04 11:52:28,817 - app.Log - INFO - Registered job state mean by category with id: 86.
+2024-04-04 11:52:28,823 - app.Log - INFO - Processed the results on state mean by category task job with id: 86.
+2024-04-04 11:52:28,829 - app.Log - INFO - Requested solution for job_86.
+2024-04-04 11:52:28,846 - app.Log - INFO - Received solution for job_86.
+2024-04-04 11:52:28,862 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily', 'state': 'Connecticut'}.
+2024-04-04 11:52:28,864 - app.Log - INFO - Registered job state mean by category with id: 87.
+2024-04-04 11:52:28,867 - app.Log - INFO - Processed the results on state mean by category task job with id: 87.
+2024-04-04 11:52:28,872 - app.Log - INFO - Requested solution for job_87.
+2024-04-04 11:52:28,884 - app.Log - INFO - Received solution for job_87.
+2024-04-04 11:52:28,899 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification', 'state': 'Wisconsin'}.
+2024-04-04 11:52:28,901 - app.Log - INFO - Registered job state mean by category with id: 88.
+2024-04-04 11:52:28,905 - app.Log - INFO - Processed the results on state mean by category task job with id: 88.
+2024-04-04 11:52:28,909 - app.Log - INFO - Requested solution for job_88.
+2024-04-04 11:52:28,919 - app.Log - INFO - Received solution for job_88.
+2024-04-04 11:52:28,932 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily', 'state': 'Georgia'}.
+2024-04-04 11:52:28,933 - app.Log - INFO - Registered job state mean by category with id: 89.
+2024-04-04 11:52:28,937 - app.Log - INFO - Processed the results on state mean by category task job with id: 89.
+2024-04-04 11:52:28,941 - app.Log - INFO - Requested solution for job_89.
+2024-04-04 11:52:28,950 - app.Log - INFO - Received solution for job_89.
+2024-04-04 11:52:28,961 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification', 'state': 'Connecticut'}.
+2024-04-04 11:52:28,962 - app.Log - INFO - Registered job state mean by category with id: 90.
+2024-04-04 11:52:28,966 - app.Log - INFO - Processed the results on state mean by category task job with id: 90.
+2024-04-04 11:52:28,971 - app.Log - INFO - Requested solution for job_90.
+2024-04-04 11:52:28,978 - app.Log - INFO - Received solution for job_90.
+2024-04-04 11:52:28,990 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification', 'state': 'Georgia'}.
+2024-04-04 11:52:28,991 - app.Log - INFO - Registered job state mean by category with id: 91.
+2024-04-04 11:52:28,995 - app.Log - INFO - Processed the results on state mean by category task job with id: 91.
+2024-04-04 11:52:28,999 - app.Log - INFO - Requested solution for job_91.
+2024-04-04 11:52:29,005 - app.Log - INFO - Received solution for job_91.
+2024-04-04 11:52:29,020 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have obesity', 'state': 'Oklahoma'}.
+2024-04-04 11:52:29,021 - app.Log - INFO - Registered job state mean by category with id: 92.
+2024-04-04 11:52:29,025 - app.Log - INFO - Processed the results on state mean by category task job with id: 92.
+2024-04-04 11:52:29,029 - app.Log - INFO - Requested solution for job_92.
+2024-04-04 11:52:29,035 - app.Log - INFO - Received solution for job_92.
+2024-04-04 11:52:29,047 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have obesity', 'state': 'Wisconsin'}.
+2024-04-04 11:52:29,048 - app.Log - INFO - Registered job state mean by category with id: 93.
+2024-04-04 11:52:29,052 - app.Log - INFO - Processed the results on state mean by category task job with id: 93.
+2024-04-04 11:52:29,056 - app.Log - INFO - Requested solution for job_93.
+2024-04-04 11:52:29,066 - app.Log - INFO - Received solution for job_93.
+2024-04-04 11:52:29,078 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have obesity', 'state': 'Connecticut'}.
+2024-04-04 11:52:29,079 - app.Log - INFO - Registered job state mean by category with id: 94.
+2024-04-04 11:52:29,083 - app.Log - INFO - Processed the results on state mean by category task job with id: 94.
+2024-04-04 11:52:29,087 - app.Log - INFO - Requested solution for job_94.
+2024-04-04 11:52:29,095 - app.Log - INFO - Received solution for job_94.
+2024-04-04 11:52:29,112 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have obesity', 'state': 'Georgia'}.
+2024-04-04 11:52:29,118 - app.Log - INFO - Registered job state mean by category with id: 95.
+2024-04-04 11:52:29,122 - app.Log - INFO - Processed the results on state mean by category task job with id: 95.
+2024-04-04 11:52:29,128 - app.Log - INFO - Requested solution for job_95.
+2024-04-04 11:52:29,141 - app.Log - INFO - Received solution for job_95.
+2024-04-04 11:52:29,155 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week', 'state': 'Oklahoma'}.
+2024-04-04 11:52:29,156 - app.Log - INFO - Registered job state mean by category with id: 96.
+2024-04-04 11:52:29,160 - app.Log - INFO - Processed the results on state mean by category task job with id: 96.
+2024-04-04 11:52:29,167 - app.Log - INFO - Requested solution for job_96.
+2024-04-04 11:52:29,179 - app.Log - INFO - Received solution for job_96.
+2024-04-04 11:52:29,273 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification'}.
+2024-04-04 11:52:29,275 - app.Log - INFO - Registered job states mean with id: 97.
+2024-04-04 11:52:29,283 - app.Log - INFO - Processed the results on states mean job with id: 97.
+2024-04-04 11:52:29,287 - app.Log - INFO - Requested solution for job_97.
+2024-04-04 11:52:29,310 - app.Log - INFO - Received solution for job_97.
+2024-04-04 11:52:29,341 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have obesity'}.
+2024-04-04 11:52:29,344 - app.Log - INFO - Registered job states mean with id: 98.
+2024-04-04 11:52:29,353 - app.Log - INFO - Processed the results on states mean job with id: 98.
+2024-04-04 11:52:29,358 - app.Log - INFO - Requested solution for job_98.
+2024-04-04 11:52:29,383 - app.Log - INFO - Received solution for job_98.
+2024-04-04 11:52:29,410 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)'}.
+2024-04-04 11:52:29,411 - app.Log - INFO - Registered job states mean with id: 99.
+2024-04-04 11:52:29,415 - app.Log - INFO - Processed the results on states mean job with id: 99.
+2024-04-04 11:52:29,420 - app.Log - INFO - Requested solution for job_99.
+2024-04-04 11:52:29,435 - app.Log - INFO - Received solution for job_99.
+2024-04-04 11:52:29,451 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week'}.
+2024-04-04 11:52:29,453 - app.Log - INFO - Registered job states mean with id: 100.
+2024-04-04 11:52:29,457 - app.Log - INFO - Processed the results on states mean job with id: 100.
+2024-04-04 11:52:29,461 - app.Log - INFO - Requested solution for job_100.
+2024-04-04 11:52:29,467 - app.Log - INFO - Received solution for job_100.
+2024-04-04 11:52:29,479 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)'}.
+2024-04-04 11:52:29,480 - app.Log - INFO - Registered job states mean with id: 101.
+2024-04-04 11:52:29,484 - app.Log - INFO - Processed the results on states mean job with id: 101.
+2024-04-04 11:52:29,488 - app.Log - INFO - Requested solution for job_101.
+2024-04-04 11:52:29,494 - app.Log - INFO - Received solution for job_101.
+2024-04-04 11:52:29,506 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in muscle-strengthening activities on 2 or more days a week'}.
+2024-04-04 11:52:29,507 - app.Log - INFO - Registered job states mean with id: 102.
+2024-04-04 11:52:29,512 - app.Log - INFO - Processed the results on states mean job with id: 102.
+2024-04-04 11:52:29,515 - app.Log - INFO - Requested solution for job_102.
+2024-04-04 11:52:29,521 - app.Log - INFO - Received solution for job_102.
+2024-04-04 11:52:29,535 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in no leisure-time physical activity'}.
+2024-04-04 11:52:29,536 - app.Log - INFO - Registered job states mean with id: 103.
+2024-04-04 11:52:29,541 - app.Log - INFO - Processed the results on states mean job with id: 103.
+2024-04-04 11:52:29,545 - app.Log - INFO - Requested solution for job_103.
+2024-04-04 11:52:29,553 - app.Log - INFO - Received solution for job_103.
+2024-04-04 11:52:29,564 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming fruit less than one time daily'}.
+2024-04-04 11:52:29,565 - app.Log - INFO - Registered job states mean with id: 104.
+2024-04-04 11:52:29,569 - app.Log - INFO - Processed the results on states mean job with id: 104.
+2024-04-04 11:52:29,572 - app.Log - INFO - Requested solution for job_104.
+2024-04-04 11:52:29,580 - app.Log - INFO - Received solution for job_104.
+2024-04-04 11:52:29,593 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily'}.
+2024-04-04 11:52:29,598 - app.Log - INFO - Registered job states mean with id: 105.
+2024-04-04 11:52:29,602 - app.Log - INFO - Processed the results on states mean job with id: 105.
+2024-04-04 11:52:29,606 - app.Log - INFO - Requested solution for job_105.
+2024-04-04 11:52:29,614 - app.Log - INFO - Received solution for job_105.
+2024-04-04 11:52:29,663 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have an overweight classification'}.
+2024-04-04 11:52:29,664 - app.Log - INFO - Registered job worst five with id: 106.
+2024-04-04 11:52:29,670 - app.Log - INFO - Processed the results on worst five task job with id: 106.
+2024-04-04 11:52:29,674 - app.Log - INFO - Requested solution for job_106.
+2024-04-04 11:52:29,681 - app.Log - INFO - Received solution for job_106.
+2024-04-04 11:52:29,700 - app.Log - INFO - Request body: {'question': 'Percent of adults aged 18 years and older who have obesity'}.
+2024-04-04 11:52:29,701 - app.Log - INFO - Registered job worst five with id: 107.
+2024-04-04 11:52:29,709 - app.Log - INFO - Processed the results on worst five task job with id: 107.
+2024-04-04 11:52:29,714 - app.Log - INFO - Requested solution for job_107.
+2024-04-04 11:52:29,734 - app.Log - INFO - Received solution for job_107.
+2024-04-04 11:52:29,765 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)'}.
+2024-04-04 11:52:29,768 - app.Log - INFO - Registered job worst five with id: 108.
+2024-04-04 11:52:29,774 - app.Log - INFO - Processed the results on worst five task job with id: 108.
+2024-04-04 11:52:29,781 - app.Log - INFO - Requested solution for job_108.
+2024-04-04 11:52:29,806 - app.Log - INFO - Received solution for job_108.
+2024-04-04 11:52:29,834 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 150 minutes a week of moderate-intensity aerobic physical activity or 75 minutes a week of vigorous-intensity aerobic physical activity and engage in muscle-strengthening activities on 2 or more days a week'}.
+2024-04-04 11:52:29,837 - app.Log - INFO - Registered job worst five with id: 109.
+2024-04-04 11:52:29,842 - app.Log - INFO - Processed the results on worst five task job with id: 109.
+2024-04-04 11:52:29,847 - app.Log - INFO - Requested solution for job_109.
+2024-04-04 11:52:29,863 - app.Log - INFO - Received solution for job_109.
+2024-04-04 11:52:29,889 - app.Log - INFO - Request body: {'question': 'Percent of adults who achieve at least 300 minutes a week of moderate-intensity aerobic physical activity or 150 minutes a week of vigorous-intensity aerobic activity (or an equivalent combination)'}.
+2024-04-04 11:52:29,891 - app.Log - INFO - Registered job worst five with id: 110.
+2024-04-04 11:52:29,896 - app.Log - INFO - Processed the results on worst five task job with id: 110.
+2024-04-04 11:52:29,902 - app.Log - INFO - Requested solution for job_110.
+2024-04-04 11:52:29,918 - app.Log - INFO - Received solution for job_110.
+2024-04-04 11:52:29,939 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in muscle-strengthening activities on 2 or more days a week'}.
+2024-04-04 11:52:29,941 - app.Log - INFO - Registered job worst five with id: 111.
+2024-04-04 11:52:29,947 - app.Log - INFO - Processed the results on worst five task job with id: 111.
+2024-04-04 11:52:29,952 - app.Log - INFO - Requested solution for job_111.
+2024-04-04 11:52:29,971 - app.Log - INFO - Received solution for job_111.
+2024-04-04 11:52:29,994 - app.Log - INFO - Request body: {'question': 'Percent of adults who engage in no leisure-time physical activity'}.
+2024-04-04 11:52:29,997 - app.Log - INFO - Registered job worst five with id: 112.
+2024-04-04 11:52:30,004 - app.Log - INFO - Processed the results on worst five task job with id: 112.
+2024-04-04 11:52:30,009 - app.Log - INFO - Requested solution for job_112.
+2024-04-04 11:52:30,025 - app.Log - INFO - Received solution for job_112.
+2024-04-04 11:52:30,054 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming fruit less than one time daily'}.
+2024-04-04 11:52:30,057 - app.Log - INFO - Registered job worst five with id: 113.
+2024-04-04 11:52:30,061 - app.Log - INFO - Processed the results on worst five task job with id: 113.
+2024-04-04 11:52:30,067 - app.Log - INFO - Requested solution for job_113.
+2024-04-04 11:52:30,084 - app.Log - INFO - Received solution for job_113.
+2024-04-04 11:52:30,103 - app.Log - INFO - Request body: {'question': 'Percent of adults who report consuming vegetables less than one time daily'}.
+2024-04-04 11:52:30,105 - app.Log - INFO - Registered job worst five with id: 114.
+2024-04-04 11:52:30,109 - app.Log - INFO - Processed the results on worst five task job with id: 114.
+2024-04-04 11:52:30,113 - app.Log - INFO - Requested solution for job_114.
+2024-04-04 11:52:30,131 - app.Log - INFO - Received solution for job_114.
