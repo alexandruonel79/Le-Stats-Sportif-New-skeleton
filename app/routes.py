@@ -69,7 +69,7 @@ def get_all_jobs_status():
 def states_mean_request():
     # Get request data
     data = request.json
-    webserver.logger.info("Request body: %s.", data)
+    webserver.logger.info("(/api/states_mean): Request body: %s.", data)
     #print(f"Got request {data}")
 
     # TODO
@@ -95,9 +95,9 @@ def states_mean_request():
 @webserver.route("/api/graceful_shutdown", methods=["GET"])
 def graceful_shutdown():
     print("Closing server")
-    webserver.logger.info("Requested server shutdown.")
+    webserver.logger.info("(/api/graceful_shutdown): Requested server shutdown.")
     webserver.tasks_runner.stop()
-    webserver.logger.info("Server closed the threadpool.")
+    webserver.logger.info("(/api/graceful_shutdown): Server closed the threadpool.")
     print("Server closed")
     webserver.tasks_runner.check_threads()
     return jsonify({"status": "done", "data": "Server closed!"})
@@ -106,9 +106,9 @@ def graceful_shutdown():
 # acum test
 @webserver.route("/api/num_jobs", methods=["GET"])
 def num_jobs():
-    webserver.logger.info("Requested number of jobs that are still waiting.")
+    webserver.logger.info("(/api/num_jobs): Requested number of jobs that are still waiting.")
     res = jobs_states_func.get_unsolved_jobs_count(webserver.job_counter, webserver.tasks_runner.get_fs_lock())
-    webserver.logger.info("Received a total of %d unsolved jobs.", res)
+    webserver.logger.info("(/api/num_jobs): Received a total of %d unsolved jobs.", res)
     return jsonify({"status": "done", "data": res})
 
 @webserver.route("/api/state_mean", methods=["POST"])
@@ -116,7 +116,7 @@ def state_mean_request():
     # TODO
     # Get request data
     data = request.json
-    webserver.logger.info("Request body: %s.", data)
+    webserver.logger.info("(/api/state_mean): Request body: %s.", data)
     #print(f"Got request {data}")
     # Register job. Don't wait for task to finish
     registered = webserver.tasks_runner.submitTask(
@@ -128,7 +128,7 @@ def state_mean_request():
     # Increment job_id counter
     webserver.job_counter += 1
     # Return associated job_id
-    webserver.logger.info("Registered job state mean with id: %d.", webserver.job_counter - 1)
+    webserver.logger.info("(/api/state_mean): Registered job state mean with id: %d.", webserver.job_counter - 1)
     return jsonify({"job_id": webserver.job_counter - 1})
 
 @webserver.route("/api/best5", methods=["POST"])
@@ -136,7 +136,7 @@ def best5_request():
     # TODO
     # Get request data
     data = request.json
-    webserver.logger.info("Request body: %s.", data)
+    webserver.logger.info("(/api/best5): Request body: %s.", data)
     #print(f"Got request {data}")
     # Register job. Don't wait for task to finish
     registered = webserver.tasks_runner.submitTask(
@@ -149,7 +149,7 @@ def best5_request():
     # Increment job_id counter
     webserver.job_counter += 1
     # Return associated job_id
-    webserver.logger.info("Registered job best five with id: %d.", webserver.job_counter - 1)
+    webserver.logger.info("(/api/best5): Registered job best five with id: %d.", webserver.job_counter - 1)
     return jsonify({"job_id": webserver.job_counter - 1})
 
 
@@ -158,7 +158,7 @@ def worst5_request():
     # TODO
     # Get request data
     data = request.json
-    webserver.logger.info("Request body: %s.", data)
+    webserver.logger.info("(/api/worst5): Request body: %s.", data)
     #print(f"Got request {data}")
     # Register job. Don't wait for task to finish
     registered = webserver.tasks_runner.submitTask(
@@ -171,7 +171,7 @@ def worst5_request():
     # Increment job_id counter
     webserver.job_counter += 1
     # Return associated job_id
-    webserver.logger.info("Registered job worst five with id: %d.", webserver.job_counter - 1)
+    webserver.logger.info("(/api/worst5): Registered job worst five with id: %d.", webserver.job_counter - 1)
     return jsonify({"job_id": webserver.job_counter - 1})
 
 
@@ -180,7 +180,7 @@ def global_mean_request():
     # TODO
     # Get request data
     data = request.json
-    webserver.logger.info("Request body: %s.", data)
+    webserver.logger.info("(/api/global_mean): Request body: %s.", data)
     #print(f"Got request {data}")
     # Register job. Don't wait for task to finish
     registered = webserver.tasks_runner.submitTask(
@@ -192,7 +192,7 @@ def global_mean_request():
     # Increment job_id counter
     webserver.job_counter += 1
     # Return associated job_id
-    webserver.logger.info("Registered job global mean with id %d.", webserver.job_counter - 1)
+    webserver.logger.info("(/api/global_mean): Registered job global mean with id %d.", webserver.job_counter - 1)
     return jsonify({"job_id": webserver.job_counter - 1})
 
 
@@ -201,7 +201,7 @@ def diff_from_mean_request():
     # TODO
     # Get request data
     data = request.json
-    webserver.logger.info("Request body: %s.", data)
+    webserver.logger.info("(/api/diff_from_mean): Request body: %s.", data)
     #print(f"Got request {data}")
     # Register job. Don't wait for task to finish
     registered = webserver.tasks_runner.submitTask(
@@ -214,7 +214,7 @@ def diff_from_mean_request():
     # Increment job_id counter
     webserver.job_counter += 1
     # Return associated job_id
-    webserver.logger.info("Registered job diff from mean with id: %d.", webserver.job_counter - 1)
+    webserver.logger.info("(/api/diff_from_mean): Registered job diff from mean with id: %d.", webserver.job_counter - 1)
     return jsonify({"job_id": webserver.job_counter - 1})
 
 
@@ -223,7 +223,7 @@ def state_diff_from_mean_request():
     # TODO
     # Get request data
     data = request.json
-    webserver.logger.info("Request body: %s.", data)
+    webserver.logger.info("(/api/state_diff_from_mean): Request body: %s.", data)
     #print(f"Got request {data}")
     # Register job. Don't wait for task to finish
     registered = webserver.tasks_runner.submitTask(
@@ -235,7 +235,7 @@ def state_diff_from_mean_request():
     # Increment job_id counter
     webserver.job_counter += 1
     # Return associated job_id
-    webserver.logger.info("Registered job state diff from mean with id: %d.", webserver.job_counter - 1)
+    webserver.logger.info("(/api/state_diff_from_mean): Registered job state diff from mean with id: %d.", webserver.job_counter - 1)
     return jsonify({"job_id": webserver.job_counter - 1})
 
 
@@ -244,7 +244,7 @@ def mean_by_category_request():
     # TODO
     # Get request data
     data = request.json
-    webserver.logger.info("Request body: %s.", data)
+    webserver.logger.info("(/api/mean_by_category): Request body: %s.", data)
     #print(f"Got request {data}")
     # Register job. Don't wait for task to finish
     registered = webserver.tasks_runner.submitTask(
@@ -256,7 +256,7 @@ def mean_by_category_request():
     # Increment job_id counter
     webserver.job_counter += 1
     # Return associated job_id
-    webserver.logger.info("Registered job mean by category with id: %d.", webserver.job_counter - 1)
+    webserver.logger.info("(/api/mean_by_category): Registered job mean by category with id: %d.", webserver.job_counter - 1)
     return jsonify({"job_id": webserver.job_counter - 1})
 
 
@@ -265,7 +265,7 @@ def state_mean_by_category_request():
     # TODO
     # Get request data
     data = request.json
-    webserver.logger.info("Request body: %s.", data)
+    webserver.logger.info("(/api/state_mean_by_category): Request body: %s.", data)
     #print(f"Got request {data}")
     # Register job. Don't wait for task to finish
     registered = webserver.tasks_runner.submitTask(
@@ -277,7 +277,7 @@ def state_mean_by_category_request():
     # Increment job_id counter
     webserver.job_counter += 1
     # Return associated job_id
-    webserver.logger.info("Registered job state mean by category with id: %d.", webserver.job_counter - 1)
+    webserver.logger.info("(/api/state_mean_by_category): Registered job state mean by category with id: %d.", webserver.job_counter - 1)
     return jsonify({"job_id": webserver.job_counter - 1})
 
 

@@ -66,8 +66,8 @@ class StatesMeanTask(Task):
         
         # sleep for 5 seconds
         #time.sleep(5)
-        if not self.used_as_helper_func:
-            self.logger.info("Processed the results on states mean job with id: %d.", self.id)
+        # if not self.used_as_helper_func:
+        #     self.logger.info("Processed the results on states mean job with id: %d.", self.id)
 
         return response_dict
 
@@ -94,7 +94,7 @@ class StateMeanTask(Task):
         
         mean = total_sum / total_count
 
-        self.logger.info("Processed the results on state mean job with id: %d.", self.id)
+        # self.logger.info("Processed the results on state mean job with id: %d.", self.id)
 
         return {self.data["state"]: mean}
 
@@ -110,7 +110,7 @@ class BestFiveTask(Task):
             self.logger.error("(BestFiveTask): The given question has too few states which have participants that responded.")
             return {"error": "The given question has too few states which have participants that responded."}
         
-        self.logger.info("Processed the results on best five task job with id: %d.", self.id)
+        # self.logger.info("Processed the results on best five task job with id: %d.", self.id)
             
         return dict(list(response_dict.items())[:5])
 
@@ -126,7 +126,7 @@ class WorstFiveTask(Task):
             self.logger.error("(WorstFiveTask): The given question has too few states which have participants that responded.")
             return {"error": "The given question has too few states which have participants that responded."}
     
-        self.logger.info("Processed the results on worst five task job with id: %d.", self.id)
+        # self.logger.info("Processed the results on worst five task job with id: %d.", self.id)
 
         return dict(list(response_dict.items())[-5:])
     
@@ -152,7 +152,7 @@ class GlobalMeanTask(Task):
         
         mean = total_sum / total_count
 
-        self.logger.info("Processed the results on global mean task job with id: %d.", self.id)
+        # self.logger.info("Processed the results on global mean task job with id: %d.", self.id)
 
         return {"global_mean": mean}
 
@@ -203,7 +203,7 @@ class DiffFromMeanTask(Task):
         for state in response_dict:
             response_dict[state] = (global_resp_sum / global_resp_count ) - self.calculate_mean(response_dict[state])
         
-        self.logger.info("Processed the results on diff from mean task job with id: %d.", self.id)
+        # self.logger.info("Processed the results on diff from mean task job with id: %d.", self.id)
         return response_dict
 
 
@@ -250,7 +250,7 @@ class StateDiffFromMeanTask(Task):
             return {"error": "Given question does not have enough responders."}
         
         res = (global_resp_sum / global_resp_count) - (state_sum / state_count)
-        self.logger.info("Processed the results on state diff from mean task job with id: %d.", self.id)
+        # self.logger.info("Processed the results on state diff from mean task job with id: %d.", self.id)
         return {self.data["state"]: res} 
     
 
@@ -280,7 +280,7 @@ class MeanByCategoryTask(Task):
             if response_dict[key] == -1:
                 self.logger.error("(MeanByCategoryTask): The key %s has no data.", key)
 
-        self.logger.info("Processed the results on mean by category task job with id: %d.", self.id)
+        # self.logger.info("Processed the results on mean by category task job with id: %d.", self.id)
 
         return dict(sorted(response_dict.items()))
 
@@ -316,7 +316,7 @@ class StateMeanByCategoryTask(Task):
 
         response_dict = dict(sorted(response_dict.items()))
         
-        self.logger.info("Processed the results on state mean by category task job with id: %d.", self.id)
+        # self.logger.info("Processed the results on state mean by category task job with id: %d.", self.id)
 
         return {self.data["state"]: response_dict}
 

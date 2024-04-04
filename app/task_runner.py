@@ -19,14 +19,14 @@ class ThreadPool:
             self.num_of_threads = int(os.environ["TP_NUM_OF_THREADS"])
         else:
             self.num_of_threads =  os.cpu_count()
-            #self.num_of_threads = 2
-            self.task_queue = Queue()
-            self.shutdown_event = Event()
-            self.threads_list = []
-            self.lock = Lock()
-            self.fs_lock = Lock()
-            # inainte de pauza
-            self.new_job_event = Event()
+        #self.num_of_threads = 2
+        self.task_queue = Queue()
+        self.shutdown_event = Event()
+        self.threads_list = []
+        self.lock = Lock()
+        self.fs_lock = Lock()
+        # inainte de pauza
+        self.new_job_event = Event()
         #print(f"Number of threads: {self.num_of_threads}")
 
     def start(self):
@@ -75,14 +75,15 @@ class TaskRunner(Thread):
         self.new_job_event = new_job_event
 
     def save_result(self, result, task_id):
-        with self.fs_lock:
-            os.makedirs("results", exist_ok=True)
-            # save result to disk
-            with open(f"results/job_id_{task_id}.txt", "w") as f:
-                # f.write(str(result))\
-                json.dump(result, f)
-
-    
+        # with self.fs_lock:
+        # os.makedirs("results", exist_ok=True)
+        # save result to disk
+        with open(f"results/job_id_{task_id}.txt", "w") as f:
+            # f.write(str(result))\
+            json.dump(result, f)
+            # f.flush()
+            # os.fsync(f.fileno())
+        
     def run(self):
         while True:
             # TODO
@@ -105,8 +106,8 @@ class TaskRunner(Thread):
                 
                 task = self.task_queue.get()
                 # in pauza
-                if not self.shutdown_event.is_set():
-                    self.new_job_event.clear()
+                # if not self.shutdown_event.is_set():
+                #     self.new_job_event.clear()
 
             # print(f"{self.name} is solving the task {task}!\n")
             result = task.solve()

@@ -193,7 +193,7 @@ class TestWebServer(unittest.TestCase):
             job_id += 1
 
     def test_z_graceful_shutdown(self):
-        res = requests.get(f"http://127.0.0.1:5000/api/graceful_shutdown")
+        res = requests.get("http://127.0.0.1:5000/api/graceful_shutdown")
         response_data = res.json()
         print(response_data)
         self.assertTrue(response_data['status'], "done" )
