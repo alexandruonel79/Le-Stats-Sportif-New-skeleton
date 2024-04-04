@@ -1,6 +1,6 @@
 import time
 import logging
 
-# create formatter
+# custom formatter for the gmt time
 class UTCFormatter(logging.Formatter):
     converter = time.gmtime
