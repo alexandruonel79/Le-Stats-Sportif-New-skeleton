@@ -20,7 +20,6 @@ from app.Task import (
 )
 from app.data_ingestor import DataIngestor
 
-
 class TestFunctions(unittest.TestCase):
     """
     Class implementation for testing my own functions without starting the server.
@@ -42,7 +41,7 @@ class TestFunctions(unittest.TestCase):
         with open("unittests/refs/ref_states_mean.txt", encoding="utf-8") as f:
             ref_data = json.load(f)
 
-        task = StatesMeanTask(1, data, self.list_of_dict, False)
+        task = StatesMeanTask(1, data, self.list_of_dict)
         # solve it
         task_res = task.solve()
         # check if task_res is correct

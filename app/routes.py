@@ -5,9 +5,6 @@
 
 from flask import request, jsonify
 from app import webserver
-
-
-# posibil nu e bn
 from app.Task import (
     StatesMeanTask,
     StateMeanTask,
@@ -37,7 +34,7 @@ def get_response(job_id):
             "Server received request for an invalid job id: %d.", job_id
         )
         return jsonify({"status": "error", "reason": "Invalid job_id"})
-
+    # get the result
     res = jobs_states_func.get_result_by_id(job_id)
     webserver.logger.info(
         "(/api/get_results/%d): Received solution for job_%d.", job_id, job_id
@@ -50,7 +47,7 @@ def get_all_jobs_status():
     """
     Checks all the jobs status and returns them.
     """
-    webserver.logger.info("Requested all jobs status.")
+    webserver.logger.info("(/api/jobs): Requested all jobs status.")
     res = jobs_states_func.get_all_jobs_status_func(webserver.job_counter)
     webserver.logger.info("Received all jobs status.")
     return jsonify({"status": "done", "data": res})
@@ -85,25 +82,21 @@ def states_mean_request():
     return jsonify({"job_id": webserver.job_counter - 1})
 
 
-# acum test
 @webserver.route("/api/graceful_shutdown", methods=["GET"])
 def graceful_shutdown():
     """
     Closes the server gracefully, meaning it will wait for all the jobs to finish.
     """
-    print("Closing server")
     webserver.logger.info("(/api/graceful_shutdown): Requested server shutdown.")
     webserver.tasks_runner.stop()
     webserver.logger.info("(/api/graceful_shutdown): Server closed the threadpool.")
-    print("Server closed")
-    webserver.tasks_runner.check_threads()
     return jsonify({"status": "done", "data": "Server closed!"})
 
 
 @webserver.route("/api/num_jobs", methods=["GET"])
 def num_jobs():
     """
-    Gets all the jobs that are still waiting.
+    Gets the number of jobs that are still waiting to be solved.
     """
     webserver.logger.info(
         "(/api/num_jobs): Requested number of jobs that are still waiting."

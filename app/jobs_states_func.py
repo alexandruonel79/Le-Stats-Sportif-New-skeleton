@@ -2,7 +2,7 @@
     Module for getting the job status.
     General idea: Checking if a job is ready or still running
     is done by checking the existence of the file
-    if the file does not exist, it is still running
+    if the file does not exist, it is still running.
 """
 
 import os
@@ -16,7 +16,7 @@ def get_result_by_id(job_id: int) -> dict:
     file_path = "results/job_id_" + str(job_id) + ".txt"
 
     try:
-        with open(file_path, "r", encoding='utf-8') as file:
+        with open(file_path, "r", encoding="utf-8") as file:
             result = json.load(file)
             return {"status": "done", "data": result}
     except (json.JSONDecodeError, FileNotFoundError):
