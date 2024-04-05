@@ -1,8 +1,10 @@
+"""
+    Module to create the logger, inspired from documentation,
+    the link from ocw: https://docs.python.org/3/howto/logging.html
+"""
 import logging
 from logging.handlers import RotatingFileHandler
 from app.LoggerFormatter import UTCFormatter
-# inspired from documentation, the link from ocw
-# https://docs.python.org/3/howto/logging.html
 
 # create logger
 logger = logging.getLogger("app.Log")

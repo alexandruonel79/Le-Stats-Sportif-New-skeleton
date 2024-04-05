@@ -1,19 +1,26 @@
+"""
+    Module for testing the web server by generating requests like the checker.
+    Insprired from the checker.
+    Can be run from /unittests directory.
+"""
 import unittest
-import os
 import json
 import requests
 from deepdiff import DeepDiff
-import time 
 
-# https://stackoverflow.com/questions/4095319/unittest-tests-order
-# unittest.defaultTestLoader.sortTestMethodsUsing = lambda *args: -1
-
+# This class can be run from its directory
 class TestWebServer(unittest.TestCase):
+    """
+        Class implementation for testing the web server.
+    """
     # unit test for a states mean
     def test_states_mean(self):
+        """
+        Test method for StatesMeanTask.
+        """
         req_data = None
 
-        with open(f"inputs/in_states_mean.txt", "r") as fin:
+        with open(f"inputs/in_states_mean.txt", "r", encoding="utf-8") as fin:
             req_data = json.load(fin)
 
         if not req_data:
@@ -38,7 +45,7 @@ class TestWebServer(unittest.TestCase):
         #     json.dump(response_data, json_file)
         ref_data = None
 
-        with open("refs/ref_states_mean.txt", "r") as fin:
+        with open("refs/ref_states_mean.txt", "r", encoding="utf-8") as fin:
             ref_data = json.load(fin)
 
         if not ref_data:
@@ -50,9 +57,12 @@ class TestWebServer(unittest.TestCase):
 
 
     def test_state_mean_by_category(self):
+        """
+        Test method for StateMeanByCategoryTask.
+        """
         req_data = None
 
-        with open(f"inputs/in_state_mean_by_category.txt", "r") as fin:
+        with open("inputs/in_state_mean_by_category.txt", "r", encoding="utf-8") as fin:
             req_data = json.load(fin)
 
         if not req_data:
@@ -75,7 +85,7 @@ class TestWebServer(unittest.TestCase):
 
         ref_data = None
 
-        with open("refs/ref_state_mean_by_category.txt", "r") as fin:
+        with open("refs/ref_state_mean_by_category.txt", "r", encoding="utf-8") as fin:
             ref_data = json.load(fin)
 
         if not ref_data:
@@ -86,9 +96,12 @@ class TestWebServer(unittest.TestCase):
         self.assertTrue(d == {}, str(d))
 
     def test_state_diff_from_mean(self):
+        """
+        Test method for StateDiffFromMeanTask.
+        """
         req_data = None
 
-        with open(f"inputs/in_state_diff_from_mean.txt", "r") as fin:
+        with open("inputs/in_state_diff_from_mean.txt", "r", encoding="utf-8") as fin:
             req_data = json.load(fin)
 
         if not req_data:
@@ -112,24 +125,29 @@ class TestWebServer(unittest.TestCase):
         # print(response_data)
         ref_data = None
 
-        with open("refs/ref_state_diff_from_mean.txt", "r") as fin:
+        with open("refs/ref_state_diff_from_mean.txt", "r", encoding="utf-8") as fin:
             ref_data = json.load(fin)
 
         if not ref_data:
             print("(test_state_diff_from_mean): Could not load refs")
             return
-        
         d = DeepDiff(response_data['data'], ref_data, math_epsilon=0.01)
         self.assertTrue(d == {}, str(d))
 
     def test_get_results_invalid_job_id(self):
+        """
+        Test method for get_results with invalid job_id.
+        """
         res = requests.get(f"http://127.0.0.1:5000/api/get_results/1000")
         response_data = res.json()
         # print(response_data)
         self.assertTrue(response_data['status'], "error" )
         self.assertTrue(response_data['reason'], "Invalid job_id")
     
-    def test_y_submitTask_after_graceful_shutdown(self):
+    def test_y_submit_task_after_graceful_shutdown(self):
+        """
+        Test method for submitting a task after graceful shutdown.
+        """
         res = requests.get(f"http://127.0.0.1:5000/api/graceful_shutdown")
         response_data = res.json()
         # print(response_data)
@@ -139,7 +157,7 @@ class TestWebServer(unittest.TestCase):
         # now try to submit a new task
         req_data = None
 
-        with open(f"inputs/in_state_diff_from_mean.txt", "r") as fin:
+        with open(f"inputs/in_state_diff_from_mean.txt", "r", encoding="utf-8") as fin:
             req_data = json.load(fin)
 
         if not req_data:
@@ -158,6 +176,9 @@ class TestWebServer(unittest.TestCase):
 
     # there must be 0 jobs that remained unprocessed after graceful shutdown
     def test_y_num_jobs_after_graceful_shutdown(self):
+        """
+        Test method for getting the number of unsolved jobs after graceful shutdown.
+        """
         res = requests.get(f"http://127.0.0.1:5000/api/graceful_shutdown")
         response_data = res.json()
         # print(response_data)
@@ -174,6 +195,9 @@ class TestWebServer(unittest.TestCase):
 
     # all should be finished after graceful shutdown
     def test_y_jobs_after_graceful_shutdown(self):
+        """
+        Test method for getting the status of all jobs after graceful shutdown.
+        """
         res = requests.get(f"http://127.0.0.1:5000/api/graceful_shutdown")
         response_data = res.json()
         # print(response_data)
@@ -193,6 +217,9 @@ class TestWebServer(unittest.TestCase):
             job_id += 1
 
     def test_z_graceful_shutdown(self):
+        """
+        Test method for checking if the server is closed after graceful shutdown.
+        """
         res = requests.get("http://127.0.0.1:5000/api/graceful_shutdown")
         response_data = res.json()
         print(response_data)
