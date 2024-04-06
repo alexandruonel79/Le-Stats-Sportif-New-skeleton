@@ -1,0 +1,1 @@
+{"('Arad', 'Income', '1500 or lower')": 18.5, "('Bucuresti', 'Income', '2000 or greater')": 34.2, "('Constanta', 'Income', '2000 or greater')": 30.6, "('Giurgiu', 'Income', '2000 or greater')": 24.6, "('Iasi', 'Income', '2500 or greater')": 16.5, "('Ilfov', 'Income', '2000 or greater')": 27.0, "('Valcea', 'Income', '1500 or lower')": 21.5}

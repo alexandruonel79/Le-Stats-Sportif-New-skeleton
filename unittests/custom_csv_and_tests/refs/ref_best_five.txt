@@ -1,0 +1,1 @@
+{"Bucuresti": 32.0, "Iasi": 24.5, "Constanta": 23.7, "Ilfov": 23.0, "Giurgiu": 19.1}

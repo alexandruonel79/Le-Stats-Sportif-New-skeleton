@@ -1,7 +1,8 @@
 """
     Module for testing the web server by generating requests like the checker.
     Inspired from the checker.
-    Can be run from anywhere.
+    This class must be run from the root directory of the project.
+    python3 -m unittest unittests/TestWebserver.py
 """
 
 import unittest

@@ -1,0 +1,108 @@
+Onel Alexandru
+332 CB
+
+We had to implement a server which accepts jobs and uses a thread pool
+to solve them using multiple threads. When a request is sent to the server,
+for example the best five states, the first handler is in the routes.py file.
+In routes the request is being preprocessed. It tries to send it to the 
+thread pool and if it's accepted it returns a job id for it. The thread pool solves
+the jobs using multiple threads and stores them in a result file. When somebody sends
+a request to get a job's response, it will check the results directory and if the file with
+the specified id is found it will return it's contents, otherwise it will return a message
+saying that it is still running.
+
+Explaining the approach for the implementation:
+
+    The code is divided in: 
+        Task.py -> which solves the actual tasks
+
+        task_runner.py -> which contains the custom thread pool implementation
+
+        logger.py and LoggerFormatter.py -> used to log informations about the app's state and even errors
+        
+        data_ingestor.py -> used for reading the csv and creating a list of dictionaries
+        
+        jobs_states_func.py -> used for accesing results from the file system
+    
+    In depth explanation of the thread pool implementation(task_runner.py):
+        It contains two classes, the TreadPool and TaskRunner(Thread). The TreadPool initializes
+        the lock, the two events, the queue and a list of TaskRunners. When starting the thread pool
+        all the threads are started and given all the sincronzation variables to avoid using global ones.
+        Once all the threads started they will be blocked in the infinite while, but they are not busy waiting
+        because i used an event called new_job_event, so all the threads will wait() for the event to be set().
+        After a job is put into the queue, the next check will be if the second event, shutdown_event will be set.
+        If shutdown_event is set() and also the queue is empty() then the thread will stop. Otherwise it will go 
+        and try to get the lock() to acces the queue and set the event off if the queue has become empty or just get 
+        the next task to solve.
+        When i gracefully stop the thread pool i set the new job event for my threads to can pass the initial wait() and
+        i also set the shutdown event. If the queue is empty too it will stop, otherwise it will finish the jobs.
+
+    In depth explanation of the actual implementation of the tasks(Task.py):
+        I used an abstract class as a template for the other tasks. Each one has a solve method.
+        In the constructor i initialised it with the task id, the data from the request and the
+        list of dictionaries. The tasks weren't hard to implement, once you implemented one it was
+        pretty easy to do the rest. For example, for the states mean job, i looped through every
+        dictionary and i checked if the dictionary entry contained the request question received.
+        Then in a new dictionary, response, i added a new entry if the state wasn't already there.
+        If it was already there i just added it to his specific entry and appended it's value to 
+        the list. Then it was time to calculate the means. I looped through all the dictionary and
+        for each list i calculated the mean. Then i returned the JSON. The other jobs have a very
+        similar implementation.
+        I also did some error checking for cases like: the question does not have enogh responders,
+        or an entry has no data_value. I logged the errors using .error for a proper display in the
+        logging file.
+    
+    In depth explanation of the logger(logger.py and LoggerFormatter.py): 
+        For logging i used to files. I used logger.py to create the logger following the steps from
+        documentation, all i had to change was the type of handler used, RotatingFileHandler. I also 
+        had to create a custom formatter to get the UTC/GMT time. It was pretty easy and useful for 
+        saving the app status. Once i created the logger, i saved it in the webserver app to acces it
+        across the project. I still think that it would have been better to use it as a global variable
+        because once you create a logger if you import it in other files, it returns the exact logger.
+    
+    In depth explanation of the unit testing:
+        I tried making many types of unit tests. I have a file TestWebserver.py which is inspired from
+        the checker and sends requests and tests the response of the server with the refs. I also
+        created a TestFunctions.py which tests only the functions from my code. These two files
+        test using inputs from the original csv. I also created a custom csv and TestFunctionsCustomData.py
+        which is very similar to TestFunctions.py, but uses another csv and has two more error tests.
+        To run them, the command is in their module description. The working principle is simple. Read the
+        inputs and refs from the files. Then create a specific task and give the input as parameter. Apply the
+        solve method and get the response. Test it with the ref.
+
+I find this assignment very good because it shows us how a backend works, but very simplified.
+We did a multithreaded backend server and i think that will be a very good project for the CV.
+I tried programming backend in java and js, but i did not try python flask until now and i 
+liked it.
+
+I find the implementation not the best and not the worst: The tasks are processed in O(n) and this
+can be avoided by using a smarter db, not the "poor's man db". The thread pool works very good.
+I also like the structure and modularity of the code.
+
+[IMPORTANT] What is implemented in the homework:
+    I implemented everything(logging, unittests) and maximum on the checker.
+    I also used git and github while working on this project.
+    I have a ton of backups on my master branch of my private project.
+    Link: https://github.com/alexandruonel79/Le-Stats-Sportif-New-skeleton (private repo for now)
+
+I encountered difficulties from the thread pool when i did not have it well implemented.
+Originally i started the thread pool without busy waiting. Then i saw mistakes in that way
+and moved to a one with busy waiting. Then i saw on the forum that busy waiting is not allowed
+and modified it to do not contain busy waiting. Now it works good and efficient. I also had minor
+problems with debugging because i did not understand the errors from the checker.
+
+Interesting things discovered:
+    Unittests are pretty easy to create, but you have to think a lot
+    for possible errors.
+    Logging is very easy to implement it.
+    Python backend seems pretty easy to learn, java backend i 
+    find it harder.
+
+Resources:
+        https://ocw.cs.pub.ro/courses/asc/laboratoare/02
+        https://ocw.cs.pub.ro/courses/asc/laboratoare/03
+        https://docs.python.org/3/library/unittest.html
+        https://docs.python.org/3/library/logging.html
+        https://docs.python.org/3/howto/logging.html very good
+        https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+        https://www.youtube.com/watch?v=HKTyOUx9Wf4&ab_channel=CognitiveProgrammer

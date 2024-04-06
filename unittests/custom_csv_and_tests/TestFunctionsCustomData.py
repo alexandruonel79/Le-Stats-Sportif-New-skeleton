@@ -1,7 +1,7 @@
 """
    Module to test my functions without starting the server.
    This class must be run from the root directory of the project.
-   python3 -m unittest unittests/TestFunctions.py
+   python3 -m unittest unittests/custom_csv_and_tests/TestFunctionsCustomData.py 
 """
 
 import unittest
@@ -21,7 +21,8 @@ from app.Task import (
 )
 from app.data_ingestor import DataIngestor
 
-class TestFunctions(unittest.TestCase):
+
+class TestFunctionsCustomData(unittest.TestCase):
     """
     Class implementation for testing my own functions without starting the server.
     """
@@ -29,17 +30,21 @@ class TestFunctions(unittest.TestCase):
     # setup method
     def setUp(self):
         self.list_of_dict = DataIngestor(
-            "nutrition_activity_obesity_usa_subset.csv"
+            "unittests/custom_csv_and_tests/test_csv.csv"
         ).get_list_of_dict()
 
     def test_states_mean_task(self):
         """
         Test method for StateMeanTask.
         """
-        with open("unittests/inputs/in_states_mean.txt", encoding="utf-8") as f:
+        with open(
+            "unittests/custom_csv_and_tests/inputs/in_states_mean.txt", encoding="utf-8"
+        ) as f:
             data = json.load(f)
 
-        with open("unittests/refs/ref_states_mean.txt", encoding="utf-8") as f:
+        with open(
+            "unittests/custom_csv_and_tests/refs/ref_states_mean.txt", encoding="utf-8"
+        ) as f:
             ref_data = json.load(f)
 
         task = StatesMeanTask(1, data, self.list_of_dict)
@@ -54,12 +59,14 @@ class TestFunctions(unittest.TestCase):
         Test method for StateMeanByCategoryTask.
         """
         with open(
-            "unittests/inputs/in_state_mean_by_category.txt", encoding="utf-8"
+            "unittests/custom_csv_and_tests/inputs/in_state_mean_by_category.txt",
+            encoding="utf-8",
         ) as f:
             data = json.load(f)
 
         with open(
-            "unittests/refs/ref_state_mean_by_category.txt", encoding="utf-8"
+            "unittests/custom_csv_and_tests/refs/ref_state_mean_by_category.txt",
+            encoding="utf-8",
         ) as f:
             ref_data = json.load(f)
 
@@ -75,11 +82,15 @@ class TestFunctions(unittest.TestCase):
         Test method for StateDiffFromMeanTask.
         """
         with open(
-            "unittests/inputs/in_state_diff_from_mean.txt", encoding="utf-8"
+            "unittests/custom_csv_and_tests/inputs/in_state_diff_from_mean.txt",
+            encoding="utf-8",
         ) as f:
             data = json.load(f)
 
-        with open("unittests/refs/ref_state_diff_from_mean.txt", encoding="utf-8") as f:
+        with open(
+            "unittests/custom_csv_and_tests/refs/ref_state_diff_from_mean.txt",
+            encoding="utf-8",
+        ) as f:
             ref_data = json.load(f)
 
         task = StateDiffFromMeanTask(1, data, self.list_of_dict)
@@ -93,10 +104,14 @@ class TestFunctions(unittest.TestCase):
         """
         Test method for StateMeanTask.
         """
-        with open("unittests/inputs/in_state_mean.txt", encoding="utf-8") as f:
+        with open(
+            "unittests/custom_csv_and_tests/inputs/in_state_mean.txt", encoding="utf-8"
+        ) as f:
             data = json.load(f)
 
-        with open("unittests/refs/ref_state_mean.txt", encoding="utf-8") as f:
+        with open(
+            "unittests/custom_csv_and_tests/refs/ref_state_mean.txt", encoding="utf-8"
+        ) as f:
             ref_data = json.load(f)
 
         task = StateMeanTask(1, data, self.list_of_dict)
@@ -110,10 +125,14 @@ class TestFunctions(unittest.TestCase):
         """
         Test method for BestFiveTask.
         """
-        with open("unittests/inputs/in_best_five.txt", encoding="utf-8") as f:
+        with open(
+            "unittests/custom_csv_and_tests/inputs/in_best_five.txt", encoding="utf-8"
+        ) as f:
             data = json.load(f)
 
-        with open("unittests/refs/ref_best_five.txt", encoding="utf-8") as f:
+        with open(
+            "unittests/custom_csv_and_tests/refs/ref_best_five.txt", encoding="utf-8"
+        ) as f:
             ref_data = json.load(f)
 
         task = BestFiveTask(1, data, self.list_of_dict)
@@ -127,10 +146,14 @@ class TestFunctions(unittest.TestCase):
         """
         Test method for WorstFiveTask.
         """
-        with open("unittests/inputs/in_worst_five.txt", encoding="utf-8") as f:
+        with open(
+            "unittests/custom_csv_and_tests/inputs/in_worst_five.txt", encoding="utf-8"
+        ) as f:
             data = json.load(f)
 
-        with open("unittests/refs/ref_worst_five.txt", encoding="utf-8") as f:
+        with open(
+            "unittests/custom_csv_and_tests/refs/ref_worst_five.txt", encoding="utf-8"
+        ) as f:
             ref_data = json.load(f)
 
         task = WorstFiveTask(1, data, self.list_of_dict)
@@ -144,10 +167,14 @@ class TestFunctions(unittest.TestCase):
         """
         Test method for GlobalMeanTask.
         """
-        with open("unittests/inputs/in_global_mean.txt", encoding="utf-8") as f:
+        with open(
+            "unittests/custom_csv_and_tests/inputs/in_global_mean.txt", encoding="utf-8"
+        ) as f:
             data = json.load(f)
 
-        with open("unittests/refs/ref_global_mean.txt", encoding="utf-8") as f:
+        with open(
+            "unittests/custom_csv_and_tests/refs/ref_global_mean.txt", encoding="utf-8"
+        ) as f:
             ref_data = json.load(f)
 
         task = GlobalMeanTask(1, data, self.list_of_dict)
@@ -161,10 +188,16 @@ class TestFunctions(unittest.TestCase):
         """
         Test method for DiffFromMeanTask.
         """
-        with open("unittests/inputs/in_diff_from_mean.txt", encoding="utf-8") as f:
+        with open(
+            "unittests/custom_csv_and_tests/inputs/in_diff_from_mean.txt",
+            encoding="utf-8",
+        ) as f:
             data = json.load(f)
 
-        with open("unittests/refs/ref_diff_from_mean.txt", encoding="utf-8") as f:
+        with open(
+            "unittests/custom_csv_and_tests/refs/ref_diff_from_mean.txt",
+            encoding="utf-8",
+        ) as f:
             ref_data = json.load(f)
 
         task = DiffFromMeanTask(1, data, self.list_of_dict)
@@ -178,10 +211,16 @@ class TestFunctions(unittest.TestCase):
         """
         Test method for MeanByCategoryTask.
         """
-        with open("unittests/inputs/in_mean_by_category.txt", encoding="utf-8") as f:
+        with open(
+            "unittests/custom_csv_and_tests/inputs/in_mean_by_category.txt",
+            encoding="utf-8",
+        ) as f:
             data = json.load(f)
 
-        with open("unittests/refs/ref_mean_by_category.txt", encoding="utf-8") as f:
+        with open(
+            "unittests/custom_csv_and_tests/refs/ref_mean_by_category.txt",
+            encoding="utf-8",
+        ) as f:
             ref_data = json.load(f)
 
         task = MeanByCategoryTask(1, data, self.list_of_dict)
@@ -189,4 +228,46 @@ class TestFunctions(unittest.TestCase):
         task_res = task.solve()
         # check if task_res is correct
         d = DeepDiff(task_res, ref_data, math_epsilon=0.01)
+        self.assertTrue(d == {}, str(d))
+
+    def test_inexistent_question(self):
+        """
+        Test method for inexistent question.
+        """
+        with open(
+            "unittests/custom_csv_and_tests/inputs/in_inexistent_question.txt",
+            encoding="utf-8",
+        ) as f:
+            data = json.load(f)
+
+        task = StateMeanTask(1, data, self.list_of_dict)
+        # solve it
+        task_res = task.solve()
+        # check if task_res is correct
+        d = DeepDiff(
+            task_res,
+            {"error": "The question and state given have no entries in the survey"},
+            math_epsilon=0.01,
+        )
+        self.assertTrue(d == {}, str(d))
+
+    def test_inexistent_state(self):
+        """
+        Test method for inexistent state.
+        """
+        with open(
+            "unittests/custom_csv_and_tests/inputs/in_inexistent_state.txt",
+            encoding="utf-8",
+        ) as f:
+            data = json.load(f)
+
+        task = StateMeanTask(1, data, self.list_of_dict)
+        # solve it
+        task_res = task.solve()
+        # check if task_res is correct
+        d = DeepDiff(
+            task_res,
+            {"error": "The question and state given have no entries in the survey"},
+            math_epsilon=0.01,
+        )
         self.assertTrue(d == {}, str(d))

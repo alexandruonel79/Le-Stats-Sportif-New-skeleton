@@ -1,5 +1,5 @@
 """
-    Module for the implementation of the tasks
+    Module for the implementation of the tasks.
 """
 
 import logging

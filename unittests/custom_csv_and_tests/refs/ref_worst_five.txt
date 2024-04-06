@@ -1,0 +1,1 @@
+{"Constanta": 23.7, "Ilfov": 23.0, "Giurgiu": 19.1, "Arad": 15.5, "Valcea": 14.5}
