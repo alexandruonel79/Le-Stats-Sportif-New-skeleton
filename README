@@ -28,9 +28,8 @@ Explaining the approach for the implementation:
         It contains two classes, the TreadPool and TaskRunner(Thread). The TreadPool initializes
         the lock, the two events, the queue and a list of TaskRunners. When starting the thread pool
         all the threads are started and given all the sincronzation variables to avoid using global ones.
-        Once all the threads started they will be blocked in the infinite while, but they are not busy waiting
+        Once all the threads started they will be blocked in the while, but they are not busy waiting
         because i used an event called new_job_event, so all the threads will wait() for the event to be set().
-        After a job is put into the queue, the next check will be if the second event, shutdown_event will be set.
         If shutdown_event is set() and also the queue is empty() then the thread will stop. Otherwise it will go 
         and try to get the lock() to acces the queue and set the event off if the queue has become empty or just get 
         the next task to solve.
@@ -51,6 +50,7 @@ Explaining the approach for the implementation:
         I also did some error checking for cases like: the question does not have enogh responders,
         or an entry has no data_value. I logged the errors using .error for a proper display in the
         logging file.
+        I also logged every exit of each function for a better debugging.
     
     In depth explanation of the logger(logger.py and LoggerFormatter.py): 
         For logging i used to files. I used logger.py to create the logger following the steps from
@@ -59,6 +59,7 @@ Explaining the approach for the implementation:
         saving the app status. Once i created the logger, i saved it in the webserver app to acces it
         across the project. I still think that it would have been better to use it as a global variable
         because once you create a logger if you import it in other files, it returns the exact logger.
+        I chose this way because global variables are forbidden and i did not want to risk.
     
     In depth explanation of the unit testing:
         I tried making many types of unit tests. I have a file TestWebserver.py which is inspired from

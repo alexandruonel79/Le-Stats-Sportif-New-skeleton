@@ -97,13 +97,11 @@ class TaskRunner(Thread):
             json.dump(result, f)
 
     def run(self):
-        while True:
+        # if all the jobs are done and shutdown event is set
+        # then the thread can finish
+        while not (self.shutdown_event.is_set() and self.task_queue.empty()):
             # wait until the event is set
             self.new_job_event.wait()
-            # if all the jobs are done and shutdown event is set
-            # then the thread can finish
-            if self.shutdown_event.is_set() and self.task_queue.empty():
-                break
 
             with self.lock:
                 if self.task_queue.empty():

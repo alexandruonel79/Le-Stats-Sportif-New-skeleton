@@ -1,0 +1,107 @@
+commit a266b639182619072812db76865576122c9c74f6
+Author: alexandruonel79 <alexandruonel79@gmail.com>
+Date:   Sat Apr 6 15:14:12 2024 +0300
+
+    Assignement is done
+
+commit 96b713de7c466eeac595d38e51c2460d408cb51e
+Author: alexandruonel79 <alexandruonel79@gmail.com>
+Date:   Fri Apr 5 20:32:58 2024 +0300
+
+    Cleaned a little bit more
+
+commit 69b6a2b23056c82a0eb7418e7fc4bc98e018efa0
+Author: alexandruonel79 <alexandruonel79@gmail.com>
+Date:   Fri Apr 5 18:40:34 2024 +0300
+
+    A little bit of pylint cleaning.
+
+commit d2772792decce1f5328e94e17bb9995d1797d59a
+Author: alexandruonel79 <alexandruonel79@gmail.com>
+Date:   Thu Apr 4 23:57:07 2024 +0300
+
+    Cleaning code in progress.
+
+commit 48b3d623c382ee5ff9127c2af4e70871c6eea794
+Author: alexandruonel79 <alexandruonel79@gmail.com>
+Date:   Thu Apr 4 23:15:40 2024 +0300
+
+    Removed the file system lock. Code needs cleanup. Works fast and checker is full.
+
+commit 506ce74554a161f5d6b8a795f7ea5a966db6db1e
+Author: alexandruonel79 <alexandruonel79@gmail.com>
+Date:   Thu Apr 4 14:52:58 2024 +0300
+
+    Added more unit tests
+
+commit 9d26168e52ae041e441b69c5fe240301616c942c
+Author: alexandruonel79 <alexandruonel79@gmail.com>
+Date:   Thu Apr 4 00:28:46 2024 +0300
+
+    ThreadPool change and logger added.
+
+commit f6982c059d060a71dd42f7b9f56fd8a47fdba2a2
+Author: alexandruonel79 <alexandruonel79@gmail.com>
+Date:   Mon Apr 1 15:14:35 2024 +0300
+
+    Logging and Unittest adding in progress.
+
+commit 7ae950ebe47d612e7fcfdae35951d63a8f096ddb
+Author: alexandruonel79 <alexandruonel79@gmail.com>
+Date:   Sun Mar 31 23:27:09 2024 +0300
+
+    Added response for when server is closed and not getting new jobs
+
+commit 095da7d49e270ac3d31b67586a25b85ae073ccca
+Author: alexandruonel79 <alexandruonel79@gmail.com>
+Date:   Sun Mar 31 19:36:11 2024 +0300
+
+    Added lock for the file system.
+
+commit 8e9c2721b2aeab961e596ccd14fe0d1dc1951aaa
+Author: alexandruonel79 <alexandruonel79@gmail.com>
+Date:   Sun Mar 31 17:17:36 2024 +0300
+
+    A little optimizing. Must add the shutdown function to the new ThreadPool.
+
+commit 9ed3b184edd98870525c6bbf957ed35477aa6503
+Author: alexandruonel79 <alexandruonel79@gmail.com>
+Date:   Sun Mar 31 16:19:20 2024 +0300
+
+    Changed the threadPool impl. Old one is wrong. Score is still 90 on checker.
+
+commit fceb1820a941fb5057d245e52c46c5fe82c67b5a
+Author: alexandruonel79 <alexandruonel79@gmail.com>
+Date:   Sun Mar 31 02:16:01 2024 +0200
+
+    Removed in memory store of job states. All good. Checker scor 90.
+
+commit 8d2713c00ceb82faaf9f2055bee4843fe4d7209d
+Author: alexandruonel79 <alexandruonel79@gmail.com>
+Date:   Sat Mar 30 18:37:59 2024 +0200
+
+    Fixed bug. Score is full on checker.
+
+commit 74d9ef72adf3086f514e1cb6b3e4e86a6dbdbe96
+Author: alexandruonel79 <alexandruonel79@gmail.com>
+Date:   Sat Mar 30 16:26:15 2024 +0200
+
+    Fixed bug, added empty category check. Score is now 80 on checker.
+
+commit 113ee3654ee90d7bdc3a7f9d1e6ee090d9f10cb7
+Author: alexandruonel79 <alexandruonel79@gmail.com>
+Date:   Sat Mar 30 15:55:43 2024 +0200
+
+    Added implementation for MeanByCategoryTask. It;s possible it has a bug, checker 79/total.
+
+commit 3d5d6d4af5fbbf6f7feddf856f57e661092e0a2e
+Author: alexandruonel79 <alexandruonel79@gmail.com>
+Date:   Fri Mar 29 19:55:24 2024 +0200
+
+    50 points on checker.
+
+commit 7e041a7e7312e2ed822822023a0a3d1a4533d980
+Author: alexandruonel79 <alexandruonel79@gmail.com>
+Date:   Fri Mar 29 18:25:35 2024 +0200
+
+    First 10 points on checker

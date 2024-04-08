@@ -51,6 +51,7 @@ class StatesMeanTask(Task):
     """
     Calculate mean of every state for a given question
     """
+
     def solve(self):
         # saves all the states and their mean values, sorted
         response_dict = {}
@@ -84,7 +85,7 @@ class StatesMeanTask(Task):
             response_dict = dict(
                 sorted(response_dict.items(), key=lambda item: item[1], reverse=True)
             )
-
+        self.logger.info("(StatesMeanTask): Finished job with id %d.", self.id)
         return response_dict
 
 
@@ -116,7 +117,7 @@ class StateMeanTask(Task):
             }
 
         mean = total_sum / total_count
-
+        self.logger.info("(StateMeanTask): Finished job with id %d.", self.id)
         return {self.data["state"]: mean}
 
 
@@ -137,7 +138,7 @@ class BestFiveTask(Task):
             return {
                 "error": "The given question has too few states which have participants that responded."
             }
-
+        self.logger.info("(BestFiveTask): Finished job with id %d.", self.id)
         return dict(list(response_dict.items())[:5])
 
 
@@ -158,7 +159,7 @@ class WorstFiveTask(Task):
             return {
                 "error": "The given question has too few states which have participants that responded."
             }
-
+        self.logger.info("(WorstFiveTask): Finished job with id %d.", self.id)
         return dict(list(response_dict.items())[-5:])
 
 
@@ -184,7 +185,7 @@ class GlobalMeanTask(Task):
             return {"error": "Given question does not have enough responders."}
 
         mean = total_sum / total_count
-
+        self.logger.info("(GlobalMeanTask): Finished job with id %d.", self.id)
         return {"global_mean": mean}
 
 
@@ -223,7 +224,7 @@ class DiffFromMeanTask(Task):
             response_dict[state] = (
                 global_resp_sum / global_resp_count
             ) - self.calculate_mean(response_dict[state])
-
+        self.logger.info("(DiffFromMeanTask): Finished job with id %d.", self.id)
         return response_dict
 
 
@@ -256,7 +257,7 @@ class StateDiffFromMeanTask(Task):
             return {"error": "Given question does not have enough responders."}
         # compute the difference between the global mean and the given state's mean
         res = (global_resp_sum / global_resp_count) - (state_sum / state_count)
-
+        self.logger.info("(StateDiffFromMeanTask): Finished job with id %d.", self.id)
         return {self.data["state"]: res}
 
 
@@ -296,7 +297,7 @@ class MeanByCategoryTask(Task):
 
             if response_dict[key] == -1:
                 self.logger.error("(MeanByCategoryTask): The key %s has no data.", key)
-
+        self.logger.info("(MeanByCategoryTask): Finished job with id %d.", self.id)
         return dict(sorted(response_dict.items()))
 
 
@@ -338,5 +339,5 @@ class StateMeanByCategoryTask(Task):
                 )
 
         response_dict = dict(sorted(response_dict.items()))
-
+        self.logger.info("(StateMeanByCategoryTask): Finished job with id %d.", self.id)
         return {self.data["state"]: response_dict}
